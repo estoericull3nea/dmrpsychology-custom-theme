@@ -10,21 +10,26 @@
 
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="header-container">
+			<div class="site-branding">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-logo">DMR</a>
+			</div>
+			
+			<nav id="site-navigation" class="main-navigation">
 				<?php
-			else :
+				wp_nav_menu(
+					array(
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+						'container'      => false,
+						'fallback_cb'    => 'dmr_fallback_menu',
+					)
+				);
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			</nav>
+			
+			<div class="header-cta">
+				<a href="#contact" class="cta-button">Call To Action</a>
+			</div>
 		</div>
 	</header>

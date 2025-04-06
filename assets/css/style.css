@@ -1,0 +1,281 @@
+/**
+ * DMR Theme Styles
+ */
+
+/* Reset and Base Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	color: #333;
+	line-height: 1.6;
+	background-color: #e8f5e9; /* Light green background */
+}
+
+/* Header Styles */
+.site-header {
+	background-color: #e8f5e9;
+	padding: 1.5rem 2rem;
+	position: relative;
+	z-index: 100;
+}
+
+.header-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.site-branding {
+	flex-shrink: 0;
+}
+
+.site-logo {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #333;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+}
+
+.site-logo:hover {
+	color: #2e7d32;
+}
+
+/* Navigation Styles */
+.main-navigation {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+#primary-menu {
+	display: flex;
+	list-style: none;
+	gap: 2rem;
+	align-items: center;
+}
+
+#primary-menu li {
+	margin: 0;
+}
+
+#primary-menu a {
+	color: #333;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 0.5rem 0;
+	transition: color 0.3s ease;
+	position: relative;
+}
+
+#primary-menu a:hover {
+	color: #2e7d32;
+}
+
+#primary-menu .current-menu-item > a,
+#primary-menu .current_page_item > a {
+	color: #2e7d32;
+	font-weight: 600;
+}
+
+#primary-menu .current-menu-item > a::after,
+#primary-menu .current_page_item > a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: #2e7d32;
+}
+
+/* CTA Button Styles */
+.cta-button {
+	display: inline-block;
+	background-color: #2e7d32; /* Dark green */
+	color: #fff;
+	padding: 0.75rem 2rem;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1rem;
+	border-radius: 4px;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	white-space: nowrap;
+}
+
+.cta-button:hover {
+	background-color: #1b5e20;
+	transform: translateY(-2px);
+}
+
+.header-cta {
+	flex-shrink: 0;
+}
+
+/* Hero Section Styles */
+.hero-section {
+	background-color: #e8f5e9;
+	padding: 4rem 2rem;
+	min-height: 80vh;
+	display: flex;
+	align-items: center;
+}
+
+.hero-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: center;
+}
+
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.hero-headline {
+	font-size: 3.5rem;
+	font-weight: 700;
+	line-height: 1.1;
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.headline-line {
+	display: block;
+}
+
+.hero-description {
+	font-size: 1.125rem;
+	color: #555;
+	line-height: 1.7;
+	max-width: 600px;
+}
+
+.hero-cta {
+	margin-top: 1rem;
+}
+
+/* Hero Image Styles */
+.hero-image {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+}
+
+.hero-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image-placeholder {
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+	background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #999;
+	font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+	.hero-container {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+	
+	.hero-image {
+		order: -1;
+		min-height: 400px;
+	}
+	
+	.hero-headline {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.header-container {
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	
+	.main-navigation {
+		order: 3;
+		width: 100%;
+		justify-content: flex-start;
+	}
+	
+	#primary-menu {
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	
+	.hero-section {
+		padding: 2rem 1rem;
+	}
+	
+	.hero-headline {
+		font-size: 2rem;
+	}
+	
+	.hero-description {
+		font-size: 1rem;
+	}
+	
+	.cta-button {
+		padding: 0.625rem 1.5rem;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.site-header {
+		padding: 1rem;
+	}
+	
+	.header-container {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	.main-navigation {
+		order: 2;
+	}
+	
+	.header-cta {
+		order: 3;
+		width: 100%;
+	}
+	
+	.header-cta .cta-button {
+		width: 100%;
+		text-align: center;
+	}
+	
+	.hero-headline {
+		font-size: 1.75rem;
+	}
+}
