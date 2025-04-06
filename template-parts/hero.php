@@ -11,7 +11,7 @@
 				We will write a persuasive introduction for you or your company. This can be about your products, offerings, or simply why you exist.
 			</p>
 			<div class="hero-cta">
-				<a href="#contact" class="cta-button">Call To Action</a>
+				<a href="https://forms.gle/qm4JR9u9r2M7mxf18" class="cta-button" target="_blank" rel="noopener noreferrer">Book Now</a>
 			</div>
 		</div>
 		<div class="hero-image">

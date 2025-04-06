@@ -29,7 +29,7 @@
 			</nav>
 			
 			<div class="header-cta">
-				<a href="#contact" class="cta-button">Call To Action</a>
+				<a href="https://forms.gle/qm4JR9u9r2M7mxf18" class="cta-button" target="_blank" rel="noopener noreferrer">Book Now</a>
 			</div>
 		</div>
 	</header>
