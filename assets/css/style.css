@@ -65,6 +65,11 @@ body {
 
 #primary-menu li {
 	margin: 0;
+	position: relative;
+}
+
+#primary-menu > li {
+	position: relative;
 }
 
 #primary-menu a {
@@ -73,8 +78,11 @@ body {
 	font-size: 1rem;
 	font-weight: 500;
 	padding: 0.5rem 0;
-	transition: color 0.3s ease;
+	transition: all 0.3s ease;
 	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 
 #primary-menu a:hover {
@@ -96,6 +104,134 @@ body {
 	right: 0;
 	height: 2px;
 	background-color: #2e7d32;
+}
+
+/* Dropdown Arrow for Parent Items */
+#primary-menu .menu-item-has-children > a {
+	padding-right: 1.25rem;
+}
+
+#primary-menu .menu-item-has-children > a::after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 5px solid currentColor;
+	margin-left: 0.5rem;
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#primary-menu .menu-item-has-children:hover > a {
+	color: #2e7d32;
+}
+
+#primary-menu .menu-item-has-children:hover > a::after {
+	transform: translateY(-50%) rotate(180deg);
+	border-top-color: #2e7d32;
+}
+
+/* Submenu Styles */
+#primary-menu .sub-menu {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%) translateY(10px);
+	background: #ffffff;
+	list-style: none;
+	padding: 0.75rem 0;
+	margin: 0;
+	min-width: 220px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+	border-radius: 12px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	z-index: 1000;
+	margin-top: 1rem;
+	border: 1px solid rgba(46, 125, 50, 0.1);
+	backdrop-filter: blur(10px);
+}
+
+#primary-menu .menu-item-has-children:hover > .sub-menu {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(-50%) translateY(0);
+}
+
+#primary-menu .sub-menu li {
+	margin: 0;
+	position: relative;
+}
+
+#primary-menu .sub-menu a {
+	color: #4a4a4a;
+	font-size: 0.95rem;
+	font-weight: 500;
+	padding: 0.75rem 1.5rem;
+	display: block;
+	transition: all 0.25s ease;
+	border-radius: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+#primary-menu .sub-menu a::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+	transform: scaleY(0);
+	transition: transform 0.3s ease;
+}
+
+#primary-menu .sub-menu a:hover {
+	color: #2e7d32;
+	background: rgba(46, 125, 50, 0.06);
+	padding-left: 1.75rem;
+}
+
+#primary-menu .sub-menu a:hover::before {
+	transform: scaleY(1);
+}
+
+#primary-menu .sub-menu .current-menu-item > a,
+#primary-menu .sub-menu .current_page_item > a {
+	color: #2e7d32;
+	background: rgba(46, 125, 50, 0.08);
+	font-weight: 600;
+}
+
+#primary-menu .sub-menu .current-menu-item > a::before,
+#primary-menu .sub-menu .current_page_item > a::before {
+	transform: scaleY(1);
+}
+
+/* Submenu Item Hover Effect */
+#primary-menu .sub-menu li {
+	position: relative;
+}
+
+#primary-menu .sub-menu li::after {
+	content: '';
+	position: absolute;
+	left: 1.5rem;
+	right: 1.5rem;
+	bottom: 0;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(46, 125, 50, 0.1), transparent);
+}
+
+#primary-menu .sub-menu li:last-child::after {
+	display: none;
 }
 
 /* CTA Button Styles */
@@ -639,6 +775,42 @@ body {
 	#primary-menu {
 		flex-wrap: wrap;
 		gap: 1rem;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	/* Mobile Submenu Styles */
+	#primary-menu .sub-menu {
+		position: static;
+		transform: none;
+		opacity: 1;
+		visibility: visible;
+		box-shadow: none;
+		border: none;
+		background: rgba(46, 125, 50, 0.05);
+		border-radius: 8px;
+		margin-top: 0.5rem;
+		margin-left: 1rem;
+		padding: 0.5rem 0;
+		min-width: auto;
+		width: calc(100% - 1rem);
+	}
+	
+	#primary-menu .sub-menu a {
+		padding: 0.625rem 1.25rem;
+		font-size: 0.9rem;
+	}
+	
+	#primary-menu .sub-menu a:hover {
+		padding-left: 1.5rem;
+	}
+	
+	#primary-menu .menu-item-has-children > a::after {
+		transform: rotate(0deg);
+	}
+	
+	#primary-menu .menu-item-has-children:hover > a::after {
+		transform: rotate(180deg);
 	}
 	
 	.hero-section {
@@ -701,6 +873,16 @@ body {
 	
 	.main-navigation {
 		order: 2;
+		width: 100%;
+	}
+	
+	#primary-menu {
+		width: 100%;
+	}
+	
+	#primary-menu .sub-menu {
+		margin-left: 0.75rem;
+		width: calc(100% - 0.75rem);
 	}
 	
 	.header-cta {
