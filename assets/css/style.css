@@ -992,6 +992,228 @@ body.menu-open {
 	font-size: 1rem;
 }
 
+/* Offerings Section Styles */
+.offerings-section {
+	background: #ffffff;
+	padding: 6rem 2rem;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Offerings Background Elements */
+.offerings-background-elements {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.offerings-blob {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(80px);
+	opacity: 0.4;
+	animation: float 25s ease-in-out infinite;
+}
+
+.offerings-blob-1 {
+	width: 400px;
+	height: 400px;
+	background: radial-gradient(circle, rgba(46, 125, 50, 0.12) 0%, rgba(46, 125, 50, 0.04) 50%, transparent 100%);
+	top: -150px;
+	left: -100px;
+	animation-delay: 0s;
+}
+
+.offerings-blob-2 {
+	width: 350px;
+	height: 350px;
+	background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.03) 50%, transparent 100%);
+	bottom: -100px;
+	right: -80px;
+	animation-delay: -12s;
+}
+
+.offerings-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+/* Offerings Header */
+.offerings-header {
+	margin-bottom: 4rem;
+}
+
+.offerings-main-headline {
+	font-size: 2.75rem;
+	font-weight: 800;
+	color: #1a1a1a;
+	line-height: 1.2;
+	margin: 0 0 1rem 0;
+	letter-spacing: -0.02em;
+	background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.offerings-subheadline {
+	font-size: 1.25rem;
+	color: #4a4a4a;
+	line-height: 1.7;
+	margin: 0 0 2rem 0;
+	font-weight: 400;
+}
+
+.offerings-separator {
+	border: none;
+	border-top: 1px solid rgba(46, 125, 50, 0.15);
+	margin: 2rem 0;
+	width: 100%;
+}
+
+/* Offerings Grid */
+.offerings-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+	margin-bottom: 4rem;
+}
+
+.offering-item {
+	display: flex;
+	flex-direction: column;
+	background: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(10px);
+	padding: 2rem;
+	border-radius: 16px;
+	border: 1px solid rgba(46, 125, 50, 0.1);
+	transition: all 0.3s ease;
+}
+
+.offering-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 30px rgba(46, 125, 50, 0.15);
+	background: rgba(255, 255, 255, 0.8);
+	border-color: rgba(46, 125, 50, 0.2);
+}
+
+.offering-number {
+	font-size: 1.75rem;
+	font-weight: 800;
+	color: rgba(46, 125, 50, 0.4);
+	margin-bottom: 1rem;
+	display: block;
+	line-height: 1;
+	letter-spacing: -0.02em;
+}
+
+.offering-title {
+	font-size: 1.625rem;
+	font-weight: 700;
+	color: #1a1a1a;
+	margin: 0 0 1rem 0;
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+}
+
+.offering-description {
+	font-size: 1.05rem;
+	color: #4a4a4a;
+	line-height: 1.75;
+	margin: 0 0 1.5rem 0;
+	flex-grow: 1;
+}
+
+.offering-link {
+	color: #2e7d32;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	width: fit-content;
+	position: relative;
+}
+
+.offering-link::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: linear-gradient(90deg, #2e7d32 0%, #4caf50 100%);
+	transition: width 0.3s ease;
+}
+
+.offering-link:hover {
+	color: #1b5e20;
+}
+
+.offering-link:hover::after {
+	width: 100%;
+}
+
+.offering-link svg {
+	transition: transform 0.3s ease;
+}
+
+.offering-link:hover svg {
+	transform: translateX(4px);
+}
+
+/* Offerings CTA Section */
+.offerings-cta {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	padding: 2.5rem;
+	background: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+	border: 1px solid rgba(46, 125, 50, 0.15);
+	box-shadow: 0 8px 25px rgba(46, 125, 50, 0.1);
+}
+
+.offerings-cta-headline {
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #1a1a1a;
+	margin: 0;
+	line-height: 1.3;
+	flex: 1;
+	min-width: 300px;
+	letter-spacing: -0.01em;
+}
+
+.offerings-cta-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 1rem 2.5rem;
+	border-radius: 50px;
+	white-space: nowrap;
+}
+
+.offerings-cta-button svg {
+	transition: transform 0.3s ease;
+}
+
+.offerings-cta-button:hover svg {
+	transform: translateX(4px);
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
 	.hero-section {
@@ -1019,6 +1241,35 @@ body.menu-open {
 	
 	.hero-features {
 		gap: 1rem;
+	}
+	
+	/* Offerings Section Responsive */
+	.offerings-section {
+		padding: 4rem 2rem;
+	}
+	
+	.offerings-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2.5rem;
+	}
+	
+	.offering-item {
+		padding: 1.75rem;
+	}
+	
+	.offerings-main-headline {
+		font-size: 2.25rem;
+	}
+	
+	.offerings-cta {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 2rem;
+	}
+	
+	.offerings-cta-button {
+		width: 100%;
+		justify-content: center;
 	}
 }
 
@@ -1096,6 +1347,54 @@ body.menu-open {
 	.hero-blob-1,
 	.hero-blob-2 {
 		opacity: 0.4;
+	}
+	
+	/* Offerings Section Mobile */
+	.offerings-section {
+		padding: 3rem 1.5rem;
+	}
+	
+	.offerings-header {
+		margin-bottom: 3rem;
+	}
+	
+	.offerings-main-headline {
+		font-size: 2rem;
+	}
+	
+	.offerings-subheadline {
+		font-size: 1.125rem;
+	}
+	
+	.offerings-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		margin-bottom: 2.5rem;
+	}
+	
+	.offering-item {
+		padding: 1.5rem;
+	}
+	
+	.offering-title {
+		font-size: 1.375rem;
+	}
+	
+	.offerings-cta {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1.5rem;
+		padding: 2rem 1.5rem;
+	}
+	
+	.offerings-cta-headline {
+		font-size: 1.75rem;
+		min-width: 100%;
+	}
+	
+	.offerings-cta-button {
+		width: 100%;
+		justify-content: center;
 	}
 }
 
@@ -1188,5 +1487,26 @@ body.menu-open {
 	
 	.hero-dots {
 		display: none;
+	}
+	
+	/* Offerings Section Small Mobile */
+	.offerings-section {
+		padding: 2.5rem 1rem;
+	}
+	
+	.offerings-main-headline {
+		font-size: 1.75rem;
+	}
+	
+	.offering-item {
+		padding: 1.25rem;
+	}
+	
+	.offerings-cta {
+		padding: 1.5rem;
+	}
+	
+	.offerings-cta-headline {
+		font-size: 1.5rem;
 	}
 }
