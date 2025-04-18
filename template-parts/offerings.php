@@ -14,8 +14,9 @@
 	<div class="offerings-container">
 		<!-- Section Header -->
 		<div class="offerings-header" data-animate="fade-in-up">
-			<h2 class="offerings-main-headline">Headline Describing Your Offerings Will Be Here</h2>
-			<p class="offerings-subheadline">In this section, we will write a sub-headline describing your offerings</p>
+			<h2 class="offerings-main-headline">Our Services</h2>
+			<p class="offerings-subheadline">Comprehensive mental health services designed to support your well-being
+				and growth</p>
 			<hr class="offerings-separator">
 		</div>
 
@@ -23,10 +24,11 @@
 		<div class="offerings-grid">
 			<div class="offering-item" data-animate="fade-in-up">
 				<span class="offering-number">01.</span>
-				<h3 class="offering-title">Offering 1</h3>
+				<h3 class="offering-title">Psychological Assessment</h3>
 				<p class="offering-description">
-					This section will highlight specific details about your offering. We will write about what your
-					offering is and how your company uses it to help users achieve their desired goals.
+					The goal is to collaboratively help the client understand and organize their mental space, set
+					goals, and identify the necessary steps to accomplish these goals, improve coping skills and
+					resilience, and promote positive emotional change and mental health.
 				</p>
 				<a href="#" class="offering-link">
 					<span>Learn More</span>
@@ -39,10 +41,12 @@
 
 			<div class="offering-item" data-animate="fade-in-up">
 				<span class="offering-number">02.</span>
-				<h3 class="offering-title">Offering 2</h3>
+				<h3 class="offering-title">Counseling and Psychotherapy</h3>
 				<p class="offering-description">
-					This section will highlight specific details about your offering. We will write about what your
-					offering is and how your company uses it to help users achieve their desired goals.
+					A process wherein the client answers a battery of tests. These tests will be used to evaluate a
+					person's behavior, abilities, and other characteristics, particularly for the purposes of making a
+					diagnosis or treatment recommendation. This can also be used for the accomplishment of developmental
+					forms and the issuance of a mental health clearance for students and employees.
 				</p>
 				<a href="#" class="offering-link">
 					<span>Learn More</span>
@@ -55,10 +59,12 @@
 
 			<div class="offering-item" data-animate="fade-in-up">
 				<span class="offering-number">03.</span>
-				<h3 class="offering-title">Offering 3</h3>
+				<h3 class="offering-title">Employee Training & Wellness Program</h3>
 				<p class="offering-description">
-					This section will highlight specific details about your offering. We will write about what your
-					offering is and how your company uses it to help users achieve their desired goals.
+					Mental Health Training in the workplace acknowledges the existence of different stressors in the
+					employees' lives and teaches them better ways to cope and address them to avoid the effects on their
+					work performance. It aims to improve the employee's productivity and performance, boost the
+					company's identity and culture, and reduce workplace conflict.
 				</p>
 				<a href="#" class="offering-link">
 					<span>Learn More</span>
@@ -74,10 +80,10 @@
 
 		<!-- Call to Action Section -->
 		<div class="offerings-cta" data-animate="fade-in-up">
-			<h2 class="offerings-cta-headline">Heading for the Middle Call to Action Will Be Written Here</h2>
+			<h2 class="offerings-cta-headline">Ready to Take the Next Step Towards Better Mental Health?</h2>
 			<a href="https://forms.gle/qm4JR9u9r2M7mxf18" class="cta-button offerings-cta-button" target="_blank"
 				rel="noopener noreferrer">
-				<span>Call To Action</span>
+				<span>Get Started</span>
 				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
 						stroke-linejoin="round" />
