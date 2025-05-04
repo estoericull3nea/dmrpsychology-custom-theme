@@ -41,6 +41,18 @@ function dmr_fallback_menu() {
 }
 
 /**
+ * Footer fallback menu if no menu is assigned
+ */
+function dmr_footer_fallback_menu() {
+	echo '<ul id="footer-menu">';
+	echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">Home</a></li>';
+	echo '<li><a href="' . esc_url( home_url( '/about' ) ) . '">About</a></li>';
+	echo '<li><a href="' . esc_url( home_url( '/services' ) ) . '">Services</a></li>';
+	echo '<li><a href="' . esc_url( home_url( '/contact' ) ) . '">Contact</a></li>';
+	echo '</ul>';
+}
+
+/**
  * Enqueue scripts and styles
  */
 function dmr_enqueue_scripts() {
