@@ -1648,66 +1648,64 @@ body.menu-open {
 	width: 100%;
 }
 
-/* Footer Contact */
-.footer-contact {
+/* Footer Mailing List */
+.footer-mailing-list {
 	display: flex;
 	flex-direction: column;
-	gap: 1.5rem;
+	gap: 1rem;
 }
 
-.footer-cta {
-	margin-top: 0.5rem;
+.mailing-list-text {
+	font-size: 0.95rem;
+	color: #4a4a4a;
+	line-height: 1.6;
+	margin: 0;
 }
 
-.footer-cta-button {
-	padding: 0.875rem 2rem;
-	font-size: 1rem;
-	border-radius: 50px;
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5rem;
-	white-space: nowrap;
+.mailing-list-link {
+	color: #2e7d32;
+	text-decoration: none;
+	font-size: 0.95rem;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	display: inline-block;
+	position: relative;
+	width: fit-content;
 }
 
-.footer-cta-button svg {
+.mailing-list-link::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: #2e7d32;
+	transition: width 0.3s ease;
+}
+
+.mailing-list-link:hover {
+	color: #1b5e20;
+}
+
+.mailing-list-link:hover::after {
+	width: 100%;
+}
+
+.mailing-list-qr {
+	margin-top: 1rem;
+}
+
+.qr-code-image {
+	max-width: 150px;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	transition: transform 0.3s ease;
 }
 
-.footer-cta-button:hover svg {
-	transform: translateX(4px);
-}
-
-/* Footer Social */
-.footer-social {
-	display: flex;
-	gap: 1rem;
-	align-items: center;
-}
-
-.social-link {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background: rgba(46, 125, 50, 0.1);
-	color: #2e7d32;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	border: 1px solid rgba(46, 125, 50, 0.2);
-}
-
-.social-link:hover {
-	background: #2e7d32;
-	color: #ffffff;
-	transform: translateY(-3px);
-	box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
-}
-
-.social-link svg {
-	width: 20px;
-	height: 20px;
+.qr-code-image:hover {
+	transform: scale(1.05);
 }
 
 /* Footer Bottom */
@@ -1797,8 +1795,11 @@ body.menu-open {
 		font-size: 1rem;
 	}
 	
-	.footer-cta-button {
-		width: 100%;
-		justify-content: center;
+	.mailing-list-qr {
+		text-align: center;
+	}
+	
+	.qr-code-image {
+		max-width: 120px;
 	}
 }

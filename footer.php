@@ -32,23 +32,15 @@
 				</ul>
 			</div>
 
-			<!-- Footer Contact -->
-			<div class="footer-contact">
-				<h3 class="footer-widget-title">Get In Touch</h3>
-				<div class="footer-cta">
-					<a href="https://forms.gle/qm4JR9u9r2M7mxf18" class="cta-button footer-cta-button" target="_blank" rel="noopener noreferrer">
-						<span>Book Now</span>
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</a>
-				</div>
-				<div class="footer-social">
-					<a href="https://www.facebook.com/DmrPsychologicalServices" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17V10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</a>
+			<!-- Footer Mailing List -->
+			<div class="footer-mailing-list">
+				<h3 class="footer-widget-title">Mailing List</h3>
+				<p class="mailing-list-text">Subscribe to our mailing list.</p>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSfdTXoG1ubLdZJDlfEzNgcwEQwP0j_Op9L2HEwPevNUFAihiw/viewform" class="mailing-list-link" target="_blank" rel="noopener noreferrer">
+					Link here.
+				</a>
+				<div class="mailing-list-qr">
+					<img src="<?php echo esc_url( get_site_url() . '/wp-content/uploads/2026/02/DMR-Mailing-List-QR-code.webp' ); ?>" alt="DMR Mailing List QR Code" class="qr-code-image">
 				</div>
 			</div>
 		</div>
