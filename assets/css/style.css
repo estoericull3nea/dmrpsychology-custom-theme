@@ -38,15 +38,20 @@ body {
 }
 
 .site-logo {
-	font-size: 1.5rem;
-	font-weight: 700;
-	color: #333;
+	display: inline-block;
 	text-decoration: none;
-	letter-spacing: 0.05em;
+	transition: opacity 0.3s ease;
 }
 
 .site-logo:hover {
-	color: #2e7d32;
+	opacity: 0.8;
+}
+
+.logo-image {
+	height: 100px;
+	width: auto;
+	display: block;
+	object-fit: contain;
 }
 
 /* Navigation Styles */
@@ -360,15 +365,20 @@ body {
 }
 
 .mobile-menu-logo {
-	font-size: 1.5rem;
-	font-weight: 700;
-	color: #333;
+	display: inline-block;
 	text-decoration: none;
-	letter-spacing: 0.05em;
+	transition: opacity 0.3s ease;
 }
 
 .mobile-menu-logo:hover {
-	color: #2e7d32;
+	opacity: 0.8;
+}
+
+.mobile-menu-logo .logo-image {
+	height: 70px;
+	width: auto;
+	display: block;
+	object-fit: contain;
 }
 
 .mobile-menu-close {
@@ -1408,6 +1418,10 @@ body.menu-open {
 		align-items: center;
 	}
 	
+	.logo-image {
+		height: 75px;
+	}
+	
 	.mobile-menu-panel {
 		width: 90%;
 		max-width: 320px;
@@ -1538,17 +1552,21 @@ body.menu-open {
 }
 
 .footer-logo {
-	font-size: 1.75rem;
-	font-weight: 700;
-	color: #333;
-	text-decoration: none;
-	letter-spacing: 0.05em;
 	display: inline-block;
-	transition: color 0.3s ease;
+	text-decoration: none;
+	transition: opacity 0.3s ease;
+	margin-bottom: 0.5rem;
 }
 
 .footer-logo:hover {
-	color: #2e7d32;
+	opacity: 0.8;
+}
+
+.footer-logo .logo-image {
+	height: 105px;
+	width: auto;
+	display: block;
+	object-fit: contain;
 }
 
 .footer-tagline {
@@ -1775,6 +1793,10 @@ body.menu-open {
 		grid-column: 1;
 	}
 	
+	.footer-logo .logo-image {
+		height: 85px;
+	}
+	
 	.footer-copyright {
 		flex-direction: column;
 		text-align: center;
@@ -1793,6 +1815,10 @@ body.menu-open {
 	
 	.footer-widget-title {
 		font-size: 1rem;
+	}
+	
+	.footer-logo .logo-image {
+		height: 75px;
 	}
 	
 	.mailing-list-qr {

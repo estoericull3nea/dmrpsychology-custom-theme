@@ -3,7 +3,9 @@
 		<div class="footer-content">
 			<!-- Footer Branding -->
 			<div class="footer-branding">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="footer-logo">DMR</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="footer-logo">
+					<img src="<?php echo esc_url( get_site_url() . '/wp-content/uploads/2026/02/DMR_logo.webp' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo-image">
+				</a>
 				<p class="footer-tagline">DMR Psychological Services is committed to fostering mental health and emotional well-being through compassionate, client-centered care.</p>
 			</div>
 

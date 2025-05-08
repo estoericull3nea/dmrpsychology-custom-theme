@@ -12,7 +12,9 @@
 	<header id="masthead" class="site-header">
 		<div class="header-container">
 			<div class="site-branding">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-logo">DMR</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-logo">
+					<img src="<?php echo esc_url( get_site_url() . '/wp-content/uploads/2026/02/DMR_logo.webp' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo-image">
+				</a>
 			</div>
 			
 			<nav id="site-navigation" class="main-navigation">
@@ -45,7 +47,9 @@
 		<!-- Mobile Menu Panel -->
 		<div class="mobile-menu-panel">
 			<div class="mobile-menu-header">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mobile-menu-logo">DMR</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mobile-menu-logo">
+					<img src="<?php echo esc_url( get_site_url() . '/wp-content/uploads/2026/02/DMR_logo.webp' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo-image">
+				</a>
 				<button class="mobile-menu-close" aria-label="Close mobile menu">
 					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
