@@ -94,4 +94,38 @@
 		}
 	});
 
+	// Sticky Header Scroll Effect
+	const siteHeader = document.querySelector('.site-header');
+	
+	if (siteHeader) {
+		let lastScroll = 0;
+		
+		function handleScroll() {
+			const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+			
+			if (currentScroll > 50) {
+				siteHeader.classList.add('scrolled');
+			} else {
+				siteHeader.classList.remove('scrolled');
+			}
+			
+			lastScroll = currentScroll;
+		}
+		
+		// Throttle scroll events for better performance
+		let ticking = false;
+		window.addEventListener('scroll', function() {
+			if (!ticking) {
+				window.requestAnimationFrame(function() {
+					handleScroll();
+					ticking = false;
+				});
+				ticking = true;
+			}
+		});
+		
+		// Check initial scroll position
+		handleScroll();
+	}
+
 })();
