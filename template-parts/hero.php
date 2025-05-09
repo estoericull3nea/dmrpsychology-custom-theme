@@ -56,7 +56,7 @@
 		<div class="hero-image" data-animate="fade-in-right">
 			<div class="hero-image-wrapper">
 				<div class="hero-image-glow"></div>
-				<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/Helping-Hands.webp'); ?>"
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/Psychology-and-Science-removebg.png'); ?>"
 					alt="<?php echo esc_attr(get_bloginfo('name')); ?> Hero Image">
 				<div class="hero-image-overlay"></div>
 				<div class="hero-image-decoration"></div>
