@@ -61,6 +61,33 @@
 </footer>
 </div><!-- #page -->
 
+<!-- Self Check Popup Modal -->
+<div class="self-check-modal" id="self-check-modal">
+	<div class="self-check-modal-overlay"></div>
+	<div class="self-check-modal-content">
+		<div class="self-check-modal-header">
+			<h2 class="self-check-modal-title">Take Self Check</h2>
+			<button class="self-check-modal-close" id="self-check-close" aria-label="Close">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+		</div>
+		<div class="self-check-modal-body">
+			<div class="self-check-modal-intro">
+				<p>Take a moment to assess your current stress levels and mental well-being.</p>
+			</div>
+			<div class="self-check-modal-actions">
+				<button class="self-check-take-now-btn" id="self-check-take-now">Take Now</button>
+				<button class="self-check-close-btn" id="self-check-close-btn">Close</button>
+			</div>
+			<div class="self-check-form-container" id="self-check-form-container" style="display: none;">
+				<?php echo do_shortcode('[dmr_self_check]'); ?>
+			</div>
+		</div>
+	</div>
+</div>
+
 <?php wp_footer(); ?>
 </body>
 
