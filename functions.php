@@ -64,5 +64,17 @@ function dmr_enqueue_scripts() {
 	
 	// Enqueue scripts
 	wp_enqueue_script( 'dmr-main', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0.0', true );
+	
+	// Pass settings to JavaScript
+	$dmr_settings = get_option( 'dmr_settings', array(
+		'auto_show_popup' => false,
+		'popup_delay' => 1
+	) );
+	
+	wp_localize_script( 'dmr-main', 'dmrSettings', array(
+		'autoShowPopup' => $dmr_settings['auto_show_popup'] ?? false,
+		'popupDelay' => ( $dmr_settings['popup_delay'] ?? 1 ) * 1000, // Convert to milliseconds
+		'isHome' => is_front_page() || is_home()
+	) );
 }
 add_action( 'wp_enqueue_scripts', 'dmr_enqueue_scripts' );

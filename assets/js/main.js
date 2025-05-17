@@ -185,10 +185,13 @@
 			}
 		}
 
-		// Auto-open modal on page load (after a short delay)
-		setTimeout(function() {
-			openSelfCheckModal();
-		}, 1000); // 1 second delay to ensure page is fully loaded
+		// Auto-open modal on page load if setting is enabled
+		if (typeof dmrSettings !== 'undefined' && dmrSettings.autoShowPopup && dmrSettings.isHome) {
+			const delay = dmrSettings.popupDelay || 1000;
+			setTimeout(function() {
+				openSelfCheckModal();
+			}, delay);
+		}
 
 		// Event listeners
 		if (selfCheckClose) {
