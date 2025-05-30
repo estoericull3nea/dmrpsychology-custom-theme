@@ -247,6 +247,54 @@
 			}, delay);
 		}
 
+		// Show/hide "Take Self Check" link based on submission status
+		function toggleTakeSelfCheckLink() {
+			var submissionData = localStorage.getItem('dmr_submission_success');
+			var shouldShow = true; // Show by default
+			var now = new Date().getTime();
+			
+			// Hide if user has submitted (and not expired)
+			if (submissionData) {
+				try {
+					var data = JSON.parse(submissionData);
+					if (data.submitted && data.expiresAt && now < data.expiresAt) {
+						shouldShow = false; // Hide if submitted within last 24 hours
+					} else if (data.expiresAt && now >= data.expiresAt) {
+						// Submission expired, remove it and show button
+						localStorage.removeItem('dmr_submission_success');
+						shouldShow = true;
+					}
+				} catch (e) {
+					// Invalid data, remove it and show button
+					localStorage.removeItem('dmr_submission_success');
+					shouldShow = true;
+				}
+			}
+			
+			// Show/hide desktop link
+			const takeSelfCheckLink = document.getElementById('take-self-check-link');
+			if (takeSelfCheckLink) {
+				if (shouldShow) {
+					takeSelfCheckLink.style.display = 'inline';
+				} else {
+					takeSelfCheckLink.style.display = 'none';
+				}
+			}
+			
+			// Show/hide mobile link
+			const takeSelfCheckLinkMobile = document.getElementById('take-self-check-link-mobile');
+			if (takeSelfCheckLinkMobile) {
+				if (shouldShow) {
+					takeSelfCheckLinkMobile.style.display = 'inline-block';
+				} else {
+					takeSelfCheckLinkMobile.style.display = 'none';
+				}
+			}
+		}
+		
+		// Check on page load
+		toggleTakeSelfCheckLink();
+		
 		// Handle "Take Self Check" link click (desktop and mobile)
 		const takeSelfCheckLink = document.getElementById('take-self-check-link');
 		const takeSelfCheckLinkMobile = document.getElementById('take-self-check-link-mobile');
@@ -268,6 +316,13 @@
 		if (takeSelfCheckLinkMobile) {
 			takeSelfCheckLinkMobile.addEventListener('click', handleTakeSelfCheckClick);
 		}
+		
+		// Listen for storage changes (in case submission/skip happens in another tab/window)
+		window.addEventListener('storage', function(e) {
+			if (e.key === 'dmr_submission_success' || e.key === 'dmr_modal_skipped') {
+				toggleTakeSelfCheckLink();
+			}
+		});
 
 		// Event listeners
 		if (selfCheckClose) {
