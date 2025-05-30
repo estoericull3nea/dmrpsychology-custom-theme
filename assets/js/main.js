@@ -185,19 +185,20 @@
 			}
 		}
 
-		// Check if submission was successful within last 24 hours
+		// Check if submission was successful or skipped within last 24 hours
 		function shouldShowModal() {
 			// Check if auto-show is enabled and we're on homepage
 			if (typeof dmrSettings === 'undefined' || !dmrSettings.autoShowPopup || !dmrSettings.isHome) {
 				return false;
 			}
 			
+			var now = new Date().getTime();
+			
 			// Check localStorage for successful submission
 			var submissionData = localStorage.getItem('dmr_submission_success');
 			if (submissionData) {
 				try {
 					var data = JSON.parse(submissionData);
-					var now = new Date().getTime();
 					
 					// If submission exists and hasn't expired (24 hours), don't show modal
 					if (data.submitted && data.expiresAt && now < data.expiresAt) {
@@ -214,15 +215,58 @@
 				}
 			}
 			
+			// Check localStorage for skip
+			var skipData = localStorage.getItem('dmr_modal_skipped');
+			if (skipData) {
+				try {
+					var data = JSON.parse(skipData);
+					
+					// If skip exists and hasn't expired (24 hours), don't show modal
+					if (data.skipped && data.expiresAt && now < data.expiresAt) {
+						return false; // Don't show modal, still within 24 hours
+					}
+					
+					// If expired, remove the old data
+					if (data.expiresAt && now >= data.expiresAt) {
+						localStorage.removeItem('dmr_modal_skipped');
+					}
+				} catch (e) {
+					// If parsing fails, remove invalid data
+					localStorage.removeItem('dmr_modal_skipped');
+				}
+			}
+			
 			return true; // Show modal
 		}
 
-		// Auto-open modal on page load (only if not submitted in last 24 hours)
+		// Auto-open modal on page load (only if not submitted or skipped in last 24 hours)
 		if (shouldShowModal()) {
 			const delay = dmrSettings.popupDelay || 1000;
 			setTimeout(function() {
 				openSelfCheckModal();
 			}, delay);
+		}
+
+		// Handle "Take Self Check" link click (desktop and mobile)
+		const takeSelfCheckLink = document.getElementById('take-self-check-link');
+		const takeSelfCheckLinkMobile = document.getElementById('take-self-check-link-mobile');
+		
+		function handleTakeSelfCheckClick(e) {
+			e.preventDefault();
+			
+			// Remove skip from localStorage
+			localStorage.removeItem('dmr_modal_skipped');
+			
+			// Show the modal
+			openSelfCheckModal();
+		}
+		
+		if (takeSelfCheckLink) {
+			takeSelfCheckLink.addEventListener('click', handleTakeSelfCheckClick);
+		}
+		
+		if (takeSelfCheckLinkMobile) {
+			takeSelfCheckLinkMobile.addEventListener('click', handleTakeSelfCheckClick);
 		}
 
 		// Event listeners
@@ -231,7 +275,16 @@
 		}
 
 		if (selfCheckCloseBtn) {
-			selfCheckCloseBtn.addEventListener('click', closeSelfCheckModal);
+			selfCheckCloseBtn.addEventListener('click', function() {
+				// Save skip to localStorage with 24 hour expiration
+				var expirationTime = new Date().getTime() + (24 * 60 * 60 * 1000); // 24 hours from now
+				localStorage.setItem('dmr_modal_skipped', JSON.stringify({
+					skipped: true,
+					expiresAt: expirationTime
+				}));
+				
+				closeSelfCheckModal();
+			});
 		}
 
 		if (selfCheckTakeNow) {

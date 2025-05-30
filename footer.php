@@ -79,7 +79,7 @@
 			</div>
 			<div class="self-check-modal-actions">
 				<button class="self-check-take-now-btn" id="self-check-take-now">Take Now</button>
-				<button class="self-check-close-btn" id="self-check-close-btn">Close</button>
+				<button class="self-check-close-btn" id="self-check-close-btn">Skip</button>
 			</div>
 			<div class="self-check-form-container" id="self-check-form-container" style="display: none;">
 				<?php echo do_shortcode('[dmr_self_check]'); ?>

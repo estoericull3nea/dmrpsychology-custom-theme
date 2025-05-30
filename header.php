@@ -31,6 +31,7 @@
 			</nav>
 			
 			<div class="header-cta">
+				<a href="#" class="take-self-check-link" id="take-self-check-link" style="text-decoration: underline; margin-right: 15px; color: inherit;">Take Self Check</a>
 				<a href="https://forms.gle/qm4JR9u9r2M7mxf18" class="cta-button" target="_blank" rel="noopener noreferrer">Book Now</a>
 			</div>
 			
@@ -69,6 +70,7 @@
 				?>
 			</nav>
 			<div class="mobile-menu-cta">
+				<a href="#" class="take-self-check-link" id="take-self-check-link-mobile" style="text-decoration: underline; margin-right: 15px; color: inherit; display: inline-block; margin-bottom: 10px;">Take Self Check</a>
 				<a href="https://forms.gle/qm4JR9u9r2M7mxf18" class="cta-button" target="_blank" rel="noopener noreferrer">Book Now</a>
 			</div>
 		</div>
