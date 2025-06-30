@@ -11,26 +11,23 @@
 
 			<!-- Footer Navigation -->
 			<div class="footer-navigation">
-				<h3 class="footer-widget-title">Quick Links</h3>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'primary',
-						'menu_id'        => 'footer-menu',
-						'container'      => false,
-						'fallback_cb'    => 'dmr_footer_fallback_menu',
-					)
-				);
-				?>
+				<h3 class="footer-widget-title">Menu</h3>
+				<ul>
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/services' ) ); ?>">Services</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/life-reminders' ) ); ?>">Life Reminders</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contact</a></li>
+				</ul>
 			</div>
 
-			<!-- Footer Services -->
+			<!-- Footer About -->
 			<div class="footer-services">
-				<h3 class="footer-widget-title">Our Services</h3>
+				<h3 class="footer-widget-title">About</h3>
 				<ul class="footer-services-list">
-					<li><a href="#">Psychological Assessment</a></li>
-					<li><a href="#">Counseling and Psychotherapy</a></li>
-					<li><a href="#">Employee Training & Wellness Program</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/core-values' ) ); ?>">Core Values</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/mission-vision' ) ); ?>">Mission & Vision</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/our-clients' ) ); ?>">Our Clients</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/our-team' ) ); ?>">Our Team</a></li>
 				</ul>
 			</div>
 
