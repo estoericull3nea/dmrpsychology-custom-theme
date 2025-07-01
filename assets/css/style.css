@@ -16,6 +16,13 @@
 	--dmr-h2-font-size: 2.75rem;
 	--dmr-h3-font-size: 2.0rem;
 	--dmr-heading-font-weight: 800;
+	--dmr-container-width: 1400px;
+	--dmr-header-padding: 1.5rem;
+	--dmr-header-padding-horizontal: 2rem;
+	--dmr-section-padding: 4rem;
+	--dmr-section-padding-horizontal: 2rem;
+	--dmr-section-spacing: 4rem;
+	--dmr-grid-gap: 3rem;
 }
 
 /* Reset and Base Styles */
@@ -36,7 +43,7 @@ body {
 /* Header Styles */
 .site-header {
 	background-color: var(--dmr-light-bg);
-	padding: 1.5rem 2rem;
+	padding: var(--dmr-header-padding) var(--dmr-header-padding-horizontal);
 	position: sticky;
 	top: 0;
 	z-index: 1000;
@@ -57,7 +64,7 @@ body {
 }
 
 .header-container {
-	max-width: 1400px;
+	max-width: var(--dmr-container-width);
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
@@ -564,7 +571,7 @@ body.menu-open {
 /* Hero Section Styles */
 .hero-section {
 	background: linear-gradient(135deg, var(--dmr-light-bg) 0%, #f1f8f4 50%, var(--dmr-light-bg) 100%);
-	padding: 6rem 2rem;
+	padding: var(--dmr-section-padding) var(--dmr-section-padding-horizontal);
 	min-height: 90vh;
 	display: flex;
 	align-items: center;
@@ -634,7 +641,7 @@ body.menu-open {
 }
 
 .hero-container {
-	max-width: 1400px;
+	max-width: var(--dmr-container-width);
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -1039,7 +1046,7 @@ body.menu-open {
 /* Offerings Section Styles */
 .offerings-section {
 	background: #ffffff;
-	padding: 6rem 2rem;
+	padding: var(--dmr-section-padding) var(--dmr-section-padding-horizontal);
 	position: relative;
 	overflow: hidden;
 }
@@ -1082,7 +1089,7 @@ body.menu-open {
 }
 
 .offerings-container {
-	max-width: 1200px;
+	max-width: var(--dmr-container-width);
 	margin: 0 auto;
 	position: relative;
 	z-index: 1;
@@ -1090,7 +1097,7 @@ body.menu-open {
 
 /* Offerings Header */
 .offerings-header {
-	margin-bottom: 4rem;
+	margin-bottom: var(--dmr-section-spacing);
 }
 
 .offerings-main-headline {
@@ -1126,7 +1133,7 @@ body.menu-open {
 .offerings-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 3rem;
+	gap: var(--dmr-grid-gap);
 	margin-bottom: 4rem;
 }
 
@@ -1585,7 +1592,7 @@ body.menu-open {
 }
 
 .footer-container {
-	max-width: 1400px;
+	max-width: var(--dmr-container-width);
 	margin: 0 auto;
 }
 

@@ -316,6 +316,145 @@ function dmr_customize_register( $wp_customize ) {
 		),
 		'description' => esc_html__( 'Font weight for all headings.', 'dmrpsychology' ),
 	) );
+
+	// Add Layout section
+	$wp_customize->add_section( 'dmr_layout', array(
+		'title'    => esc_html__( 'Layout', 'dmrpsychology' ),
+		'priority' => 40,
+	) );
+
+	// Container Max Width
+	$wp_customize->add_setting( 'dmr_container_width', array(
+		'default'           => 1400,
+		'sanitize_callback' => 'absint',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'dmr_container_width', array(
+		'label'       => esc_html__( 'Container Max Width (px)', 'dmrpsychology' ),
+		'section'     => 'dmr_layout',
+		'type'        => 'number',
+		'input_attrs' => array(
+			'min'  => 1000,
+			'max'  => 1920,
+			'step' => 20,
+		),
+		'description' => esc_html__( 'Maximum width for main containers (1000-1920px).', 'dmrpsychology' ),
+	) );
+
+	// Header Padding
+	$wp_customize->add_setting( 'dmr_header_padding', array(
+		'default'           => 1.5,
+		'sanitize_callback' => 'floatval',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'dmr_header_padding', array(
+		'label'       => esc_html__( 'Header Padding (rem)', 'dmrpsychology' ),
+		'section'     => 'dmr_layout',
+		'type'        => 'number',
+		'input_attrs' => array(
+			'min'  => 0.5,
+			'max'  => 4.0,
+			'step' => 0.25,
+		),
+		'description' => esc_html__( 'Vertical padding for header (0.5-4.0rem).', 'dmrpsychology' ),
+	) );
+
+	// Header Horizontal Padding
+	$wp_customize->add_setting( 'dmr_header_padding_horizontal', array(
+		'default'           => 2.0,
+		'sanitize_callback' => 'floatval',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'dmr_header_padding_horizontal', array(
+		'label'       => esc_html__( 'Header Horizontal Padding (rem)', 'dmrpsychology' ),
+		'section'     => 'dmr_layout',
+		'type'        => 'number',
+		'input_attrs' => array(
+			'min'  => 1.0,
+			'max'  => 6.0,
+			'step' => 0.5,
+		),
+		'description' => esc_html__( 'Horizontal padding for header (1.0-6.0rem).', 'dmrpsychology' ),
+	) );
+
+	// Section Padding
+	$wp_customize->add_setting( 'dmr_section_padding', array(
+		'default'           => 4.0,
+		'sanitize_callback' => 'floatval',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'dmr_section_padding', array(
+		'label'       => esc_html__( 'Section Padding (rem)', 'dmrpsychology' ),
+		'section'     => 'dmr_layout',
+		'type'        => 'number',
+		'input_attrs' => array(
+			'min'  => 2.0,
+			'max'  => 8.0,
+			'step' => 0.5,
+		),
+		'description' => esc_html__( 'Vertical padding for main sections (2.0-8.0rem).', 'dmrpsychology' ),
+	) );
+
+	// Section Horizontal Padding
+	$wp_customize->add_setting( 'dmr_section_padding_horizontal', array(
+		'default'           => 2.0,
+		'sanitize_callback' => 'floatval',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'dmr_section_padding_horizontal', array(
+		'label'       => esc_html__( 'Section Horizontal Padding (rem)', 'dmrpsychology' ),
+		'section'     => 'dmr_layout',
+		'type'        => 'number',
+		'input_attrs' => array(
+			'min'  => 1.0,
+			'max'  => 6.0,
+			'step' => 0.5,
+		),
+		'description' => esc_html__( 'Horizontal padding for sections (1.0-6.0rem).', 'dmrpsychology' ),
+	) );
+
+	// Section Spacing
+	$wp_customize->add_setting( 'dmr_section_spacing', array(
+		'default'           => 4.0,
+		'sanitize_callback' => 'floatval',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'dmr_section_spacing', array(
+		'label'       => esc_html__( 'Section Spacing (rem)', 'dmrpsychology' ),
+		'section'     => 'dmr_layout',
+		'type'        => 'number',
+		'input_attrs' => array(
+			'min'  => 2.0,
+			'max'  => 8.0,
+			'step' => 0.5,
+		),
+		'description' => esc_html__( 'Spacing between sections (2.0-8.0rem).', 'dmrpsychology' ),
+	) );
+
+	// Grid Gap
+	$wp_customize->add_setting( 'dmr_grid_gap', array(
+		'default'           => 3.0,
+		'sanitize_callback' => 'floatval',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'dmr_grid_gap', array(
+		'label'       => esc_html__( 'Grid Gap (rem)', 'dmrpsychology' ),
+		'section'     => 'dmr_layout',
+		'type'        => 'number',
+		'input_attrs' => array(
+			'min'  => 1.0,
+			'max'  => 6.0,
+			'step' => 0.5,
+		),
+		'description' => esc_html__( 'Gap between grid items (1.0-6.0rem).', 'dmrpsychology' ),
+	) );
 }
 add_action( 'customize_register', 'dmr_customize_register' );
 
@@ -337,6 +476,15 @@ function dmr_output_color_css() {
 	$h2_font_size = get_theme_mod( 'dmr_h2_font_size', 2.75 );
 	$h3_font_size = get_theme_mod( 'dmr_h3_font_size', 2.0 );
 	$heading_font_weight = get_theme_mod( 'dmr_heading_font_weight', '800' );
+	
+	// Layout settings
+	$container_width = get_theme_mod( 'dmr_container_width', 1400 );
+	$header_padding = get_theme_mod( 'dmr_header_padding', 1.5 );
+	$header_padding_horizontal = get_theme_mod( 'dmr_header_padding_horizontal', 2.0 );
+	$section_padding = get_theme_mod( 'dmr_section_padding', 4.0 );
+	$section_padding_horizontal = get_theme_mod( 'dmr_section_padding_horizontal', 2.0 );
+	$section_spacing = get_theme_mod( 'dmr_section_spacing', 4.0 );
+	$grid_gap = get_theme_mod( 'dmr_grid_gap', 3.0 );
 	?>
 	<style type="text/css" id="dmr-theme-customizations">
 		:root {
@@ -352,6 +500,37 @@ function dmr_output_color_css() {
 			--dmr-h2-font-size: <?php echo esc_attr( $h2_font_size ); ?>rem;
 			--dmr-h3-font-size: <?php echo esc_attr( $h3_font_size ); ?>rem;
 			--dmr-heading-font-weight: <?php echo esc_attr( $heading_font_weight ); ?>;
+			--dmr-container-width: <?php echo esc_attr( $container_width ); ?>px;
+			--dmr-header-padding: <?php echo esc_attr( $header_padding ); ?>rem;
+			--dmr-header-padding-horizontal: <?php echo esc_attr( $header_padding_horizontal ); ?>rem;
+			--dmr-section-padding: <?php echo esc_attr( $section_padding ); ?>rem;
+			--dmr-section-padding-horizontal: <?php echo esc_attr( $section_padding_horizontal ); ?>rem;
+			--dmr-section-spacing: <?php echo esc_attr( $section_spacing ); ?>rem;
+			--dmr-grid-gap: <?php echo esc_attr( $grid_gap ); ?>rem;
+		}
+		
+		.header-container,
+		.hero-container,
+		.offerings-container,
+		.footer-container {
+			max-width: var(--dmr-container-width);
+		}
+		
+		.site-header {
+			padding: var(--dmr-header-padding) var(--dmr-header-padding-horizontal);
+		}
+		
+		.hero-section,
+		.offerings-section {
+			padding: var(--dmr-section-padding) var(--dmr-section-padding-horizontal);
+		}
+		
+		.offerings-header {
+			margin-bottom: var(--dmr-section-spacing);
+		}
+		
+		.offerings-grid {
+			gap: var(--dmr-grid-gap);
 		}
 		
 		* {
