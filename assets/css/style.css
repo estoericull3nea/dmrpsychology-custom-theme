@@ -4,10 +4,18 @@
 
 /* Global Color Variables - Can be overridden by Customizer */
 :root {
-	--dmr-primary-color: var(--dmr-primary-color);
-	--dmr-light-green: var(--dmr-light-green);
-	--dmr-dark-green: var(--dmr-dark-green);
-	--dmr-light-bg: var(--dmr-light-bg);
+	--dmr-primary-color: #2e7d32;
+	--dmr-light-green: #4caf50;
+	--dmr-dark-green: #1b5e20;
+	--dmr-light-bg: #e8f5e9;
+	--dmr-body-font: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	--dmr-heading-font: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	--dmr-body-font-size: 16px;
+	--dmr-body-line-height: 1.6;
+	--dmr-h1-font-size: 4.5rem;
+	--dmr-h2-font-size: 2.75rem;
+	--dmr-h3-font-size: 2.0rem;
+	--dmr-heading-font-weight: 800;
 }
 
 /* Reset and Base Styles */
@@ -15,12 +23,13 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	font-family: var(--dmr-body-font);
 }
 
 body {
 	color: #333;
-	line-height: 1.6;
+	font-size: var(--dmr-body-font-size);
+	line-height: var(--dmr-body-line-height);
 	background-color: var(--dmr-light-bg);
 }
 
@@ -741,8 +750,9 @@ body.menu-open {
 }
 
 .hero-headline {
-	font-size: 4.5rem;
-	font-weight: 800;
+	font-size: var(--dmr-h1-font-size);
+	font-family: var(--dmr-heading-font);
+	font-weight: var(--dmr-heading-font-weight);
 	line-height: 1.05;
 	display: flex;
 	flex-direction: column;
@@ -1084,8 +1094,9 @@ body.menu-open {
 }
 
 .offerings-main-headline {
-	font-size: 2.75rem;
-	font-weight: 800;
+	font-size: var(--dmr-h2-font-size);
+	font-family: var(--dmr-heading-font);
+	font-weight: var(--dmr-heading-font-weight);
 	color: #1a1a1a;
 	line-height: 1.2;
 	margin: 0 0 1rem 0;
@@ -1221,8 +1232,9 @@ body.menu-open {
 }
 
 .offerings-cta-headline {
-	font-size: 2.25rem;
-	font-weight: 700;
+	font-size: var(--dmr-h3-font-size);
+	font-family: var(--dmr-heading-font);
+	font-weight: var(--dmr-heading-font-weight);
 	color: #1a1a1a;
 	margin: 0;
 	line-height: 1.3;
