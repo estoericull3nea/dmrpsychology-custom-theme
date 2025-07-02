@@ -7,7 +7,6 @@
 	<div class="hero-container">
 		<div class="hero-content">
 			<div class="hero-badge" data-animate="fade-in">
-				<span class="badge-icon">✨</span>
 				<span>Mental Health Services</span>
 			</div>
 			<h1 class="hero-headline" data-animate="fade-in-up">
