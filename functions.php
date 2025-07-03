@@ -584,7 +584,7 @@ function dmr_load_google_fonts() {
 		'Inter' => 'Inter:wght@300;400;500;600;700;800',
 		'Nunito' => 'Nunito:wght@300;400;600;700;800',
 		'Source Sans Pro' => 'Source+Sans+Pro:wght@300;400;600;700;900',
-		'Playfair Display' => 'Playfair+Display:wght@400;700;900',
+		'Playfair Display' => 'Playfair+Display:ital,wght@0,400;0,700;1,400',
 	);
 	
 	$fonts_to_load = array();
@@ -595,6 +595,11 @@ function dmr_load_google_fonts() {
 	
 	if ( isset( $google_fonts[ $heading_font ] ) && $heading_font !== $body_font ) {
 		$fonts_to_load[] = $google_fonts[ $heading_font ];
+	}
+	
+	// Always load Playfair Display for About page
+	if ( is_page_template( 'page-about.php' ) && ! in_array( 'Playfair+Display:ital,wght@0,400;0,700;1,400', $fonts_to_load ) ) {
+		$fonts_to_load[] = 'Playfair+Display:ital,wght@0,400;0,700;1,400';
 	}
 	
 	if ( ! empty( $fonts_to_load ) ) {
