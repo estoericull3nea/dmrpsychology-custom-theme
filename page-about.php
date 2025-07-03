@@ -32,31 +32,31 @@ get_header();
             <div class="about-hero-visual">
                 <div class="about-hero-portraits-arc">
                     <div class="portrait-item portrait-item-1">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/dmr-quote.webp'); ?>"
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/9.webp'); ?>"
                             alt="Portrait 1">
                     </div>
                     <div class="portrait-item portrait-item-2">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/dmr-quote.webp'); ?>"
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/8.webp'); ?>"
                             alt="Portrait 2">
                     </div>
                     <div class="portrait-item portrait-item-3">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/dmr-quote.webp'); ?>"
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/7.webp'); ?>"
                             alt="Portrait 3">
                     </div>
                     <div class="portrait-item portrait-item-4">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/dmr-quote.webp'); ?>"
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/6.webp'); ?>"
                             alt="Portrait 4">
                     </div>
                     <div class="portrait-item portrait-item-5">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/dmr-quote.webp'); ?>"
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/5.webp'); ?>"
                             alt="Portrait 5">
                     </div>
                     <div class="portrait-item portrait-item-6">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/dmr-quote.webp'); ?>"
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/4.webp'); ?>"
                             alt="Portrait 6">
                     </div>
                     <div class="portrait-item portrait-item-7">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/dmr-quote.webp'); ?>"
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/3.webp'); ?>"
                             alt="Portrait 7">
                     </div>
                 </div>
