@@ -149,6 +149,40 @@ body {
 	background-color: var(--dmr-primary-color);
 }
 
+/* Active state underline for items with children - use ::before instead */
+#primary-menu .menu-item-has-children.current-menu-item > a::before,
+#primary-menu .menu-item-has-children.current_page_item > a::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: var(--dmr-primary-color);
+	z-index: 1;
+}
+
+/* Remove ::after underline for active items with children, keep dropdown arrow */
+#primary-menu .menu-item-has-children.current-menu-item > a::after,
+#primary-menu .menu-item-has-children.current_page_item > a::after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 5px solid var(--dmr-primary-color);
+	margin-left: 0.5rem;
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	bottom: auto;
+	left: auto;
+	background-color: transparent;
+}
+
 /* Dropdown Arrow for Parent Items */
 #primary-menu .menu-item-has-children > a {
 	padding-right: 1.25rem;
