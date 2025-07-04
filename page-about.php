@@ -17,8 +17,10 @@ get_header();
                     <span class="about-hero-title-line-1">About</span>
                     <span class="about-hero-title-line-2">DMR Psychological Services</span>
                 </h1>
-                <p class="about-hero-description">All-in-one psychological services to support, guide, and empower —
-                    with compassion and professional expertise.</p>
+                <p class="about-hero-description">DMR Psychological Services, established in 2012, is a company that
+                    offers sound and professional psychological services that cater to the needs of individuals and
+                    organizations. Manned with competent, experienced, and licensed practitioners, we are committed to
+                    providing timely, practical, and effective solutions to our client's needs.</p>
                 <a href="https://forms.gle/qm4JR9u9r2M7mxf18" class="about-hero-cta-button" target="_blank"
                     rel="noopener noreferrer">
                     <span>Get Started for Free</span>
