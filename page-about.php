@@ -63,24 +63,6 @@ get_header();
                     </div>
                 </div>
             </div>
-
-            <div class="about-hero-features">
-                <div class="about-feature-item">
-                    <h3 class="about-feature-title">Expert Psychological Services</h3>
-                    <p class="about-feature-description">Access professional psychological assessments, counseling, and
-                        therapy services delivered by licensed and experienced practitioners.</p>
-                </div>
-                <div class="about-feature-item">
-                    <h3 class="about-feature-title">Personalized Care & Support</h3>
-                    <p class="about-feature-description">Receive tailored treatment plans and ongoing support designed
-                        to meet your unique needs and help you achieve your mental health goals.</p>
-                </div>
-                <div class="about-feature-item">
-                    <h3 class="about-feature-title">Organizational Wellness Programs</h3>
-                    <p class="about-feature-description">Enhance workplace well-being with comprehensive employee
-                        training and wellness programs that promote mental health and productivity.</p>
-                </div>
-            </div>
         </div>
     </section>
 </main>
