@@ -78,12 +78,12 @@ get_header();
                     offers sound and professional psychological services that cater to the needs of individuals and
                     organizations. Manned with competent, experienced, and licensed practitioners, we are committed to
                     providing timely, practical, and effective solutions to our client's needs.</p>
-                <svg class="about-core-values-arrow" width="140" height="140" viewBox="0 0 140 140" fill="none"
+                <svg class="about-core-values-arrow" width="160" height="160" viewBox="0 0 160 160" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
-                        d="M25 25 L25 70 Q25 90 45 90 L80 90 Q85 90 85 85 Q85 80 80 80 L75 80 Q70 80 70 85 L70 90 L90 115 M90 115 L110 95 M90 115 L70 95"
-                        stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                        style="filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));" />
+                        d="M20 20 L20 75 Q20 95 42 95 L75 95 Q80 95 80 90 Q80 88 78 88 L72 88 Q70 88 70 90 Q70 92 72 92 L76 92 Q78 92 78 90 Q78 88 76 88 L70 88 Q68 88 68 90 L68 95 L95 125 M95 125 L115 105 M95 125 L75 105"
+                        stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                        style="filter: drop-shadow(0 3px 4px rgba(0,0,0,0.15));" />
                 </svg>
             </div>
             <div class="about-core-values-right">
