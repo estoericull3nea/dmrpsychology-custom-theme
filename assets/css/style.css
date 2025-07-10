@@ -3079,3 +3079,211 @@ body.menu-open {
 		gap: 1.25rem;
 	}
 }
+
+/* About Page Mission & Vision Section - Professional Design */
+.about-mission-vision-section {
+	background: #ffffff;
+	padding: 6rem var(--dmr-section-padding-horizontal);
+	position: relative;
+}
+
+.about-mission-vision-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
+}
+
+.about-mission-vision-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
+	align-items: start;
+}
+
+.mission-vision-block {
+	background: #ffffff;
+	border: 1px solid #e5e5e5;
+	padding: 4rem;
+	position: relative;
+	transition: border-color 0.3s ease;
+}
+
+.mission-vision-block:hover {
+	border-color: #d0d0d0;
+}
+
+.mission-block {
+	border-top: 3px solid #2a2a2a;
+}
+
+.vision-block {
+	border-top: 3px solid #2a2a2a;
+}
+
+.mission-vision-header {
+	margin-bottom: 3rem;
+}
+
+.mission-vision-title-wrapper {
+	margin-bottom: 1.5rem;
+}
+
+.mission-vision-label {
+	display: block;
+	font-size: 0.75rem;
+	font-family: var(--dmr-heading-font);
+	font-weight: 600;
+	color: #6a6a6a;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	margin-bottom: 0.75rem;
+}
+
+.mission-vision-title {
+	font-size: 2.25rem;
+	font-family: var(--dmr-heading-font);
+	font-weight: 700;
+	color: #1a1a1a;
+	margin: 0;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+
+.mission-vision-divider {
+	width: 60px;
+	height: 2px;
+	background: #2a2a2a;
+	margin-top: 1.5rem;
+}
+
+.mission-vision-items {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+}
+
+.mission-vision-item {
+	position: relative;
+	padding-left: 2rem;
+}
+
+.mission-vision-item::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.5rem;
+	width: 6px;
+	height: 6px;
+	background: #2a2a2a;
+	border-radius: 50%;
+}
+
+.mission-vision-item:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	left: 2.5px;
+	top: 1.25rem;
+	width: 1px;
+	height: calc(100% + 1.25rem);
+	background: #e0e0e0;
+}
+
+.mission-vision-text {
+	font-size: 1.0625rem;
+	line-height: 1.8;
+	color: #4a4a4a;
+	margin: 0;
+	font-weight: 400;
+	letter-spacing: 0.01em;
+}
+
+/* Mission & Vision Responsive Styles */
+@media (max-width: 1200px) {
+	.about-mission-vision-container {
+		gap: 4rem;
+	}
+	
+	.mission-vision-block {
+		padding: 3.5rem;
+	}
+	
+	.mission-vision-title {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 968px) {
+	.about-mission-vision-section {
+		padding: 5rem var(--dmr-section-padding-horizontal);
+	}
+	
+	.about-mission-vision-container {
+		grid-template-columns: 1fr;
+		gap: 4rem;
+	}
+	
+	.mission-vision-block {
+		padding: 3rem;
+	}
+	
+	.mission-vision-header {
+		margin-bottom: 2.5rem;
+	}
+	
+	.mission-vision-items {
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.about-mission-vision-section {
+		padding: 4rem 1.5rem;
+	}
+	
+	.mission-vision-block {
+		padding: 2.5rem 2rem;
+	}
+	
+	.mission-vision-header {
+		margin-bottom: 2rem;
+	}
+	
+	.mission-vision-label {
+		font-size: 0.7rem;
+		margin-bottom: 0.5rem;
+	}
+	
+	.mission-vision-title {
+		font-size: 1.75rem;
+	}
+	
+	.mission-vision-divider {
+		width: 50px;
+		margin-top: 1rem;
+	}
+	
+	.mission-vision-items {
+		gap: 1.75rem;
+	}
+	
+	.mission-vision-item {
+		padding-left: 1.5rem;
+	}
+	
+	.mission-vision-item::before {
+		width: 5px;
+		height: 5px;
+		top: 0.4rem;
+	}
+	
+	.mission-vision-text {
+		font-size: 1rem;
+		line-height: 1.75;
+	}
+}

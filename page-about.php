@@ -137,6 +137,60 @@ get_header();
             </div>
         </div>
     </section>
+
+    <section class="about-mission-vision-section">
+        <div class="about-mission-vision-container">
+            <!-- Mission Section -->
+            <div class="mission-vision-block mission-block">
+                <div class="mission-vision-header">
+                    <div class="mission-vision-title-wrapper">
+                        <span class="mission-vision-label">MISSION</span>
+                        <h2 class="mission-vision-title">Our Mission</h2>
+                    </div>
+                    <div class="mission-vision-divider"></div>
+                </div>
+                <div class="mission-vision-items">
+                    <div class="mission-vision-item">
+                        <p class="mission-vision-text">To become an essential resource provider for companies,
+                            organizations, and individuals who seek psychological services;</p>
+                    </div>
+                    <div class="mission-vision-item">
+                        <p class="mission-vision-text">To provide timely, practical, and effective solutions to our
+                            client's needs;</p>
+                    </div>
+                    <div class="mission-vision-item">
+                        <p class="mission-vision-text">To ensure that all work is evidence-based and adheres to
+                            professional guidelines</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision Section -->
+            <div class="mission-vision-block vision-block">
+                <div class="mission-vision-header">
+                    <div class="mission-vision-title-wrapper">
+                        <span class="mission-vision-label">VISION</span>
+                        <h2 class="mission-vision-title">Our Vision</h2>
+                    </div>
+                    <div class="mission-vision-divider"></div>
+                </div>
+                <div class="mission-vision-items">
+                    <div class="mission-vision-item">
+                        <p class="mission-vision-text">A go-to center for companies and corporations in the assessment
+                            of personnel and employment applicants.</p>
+                    </div>
+                    <div class="mission-vision-item">
+                        <p class="mission-vision-text">A partner of schools, colleges, and universities in the
+                            assessment of pupils and students.</p>
+                    </div>
+                    <div class="mission-vision-item">
+                        <p class="mission-vision-text">We envision being a recognized leader in providing psychological
+                            services in the Philippines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php
