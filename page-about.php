@@ -78,13 +78,10 @@ get_header();
                     offers sound and professional psychological services that cater to the needs of individuals and
                     organizations. Manned with competent, experienced, and licensed practitioners, we are committed to
                     providing timely, practical, and effective solutions to our client's needs.</p>
-                <svg class="about-core-values-arrow" width="160" height="160" viewBox="0 0 160 160" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M20 20 L20 75 Q20 95 42 95 L75 95 Q80 95 80 90 Q80 88 78 88 L72 88 Q70 88 70 90 Q70 92 72 92 L76 92 Q78 92 78 90 Q78 88 76 88 L70 88 Q68 88 68 90 L68 95 L95 125 M95 125 L115 105 M95 125 L75 105"
-                        stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                        style="filter: drop-shadow(0 3px 4px rgba(0,0,0,0.15));" />
-                </svg>
+                <a href="#core-values-cards" class="about-core-values-arrow-link" aria-label="View our core values">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.png'); ?>"
+                        alt="Arrow pointing to core values" class="about-core-values-arrow" />
+                </a>
             </div>
             <div class="about-core-values-right">
                 <div class="about-core-values-bg-image">
@@ -92,7 +89,7 @@ get_header();
                     <span class="bg-text bg-text-2">TRUST</span>
                     <span class="bg-text bg-text-3">VALUES</span>
                 </div>
-                <div class="about-core-values-cards">
+                <div id="core-values-cards" class="about-core-values-cards">
                     <div class="about-core-value-card">
                         <span class="about-core-value-number">01</span>
                         <h3 class="about-core-value-title">Honesty</h3>

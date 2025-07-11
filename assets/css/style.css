@@ -2743,19 +2743,35 @@ body.menu-open {
 	font-weight: 400;
 }
 
-.about-core-values-arrow {
+.about-core-values-arrow-link {
+	display: inline-block;
 	margin-top: 2rem;
-	stroke: #1a1a1a;
-	stroke-width: 3.5;
-	fill: none;
-	opacity: 0.95;
-	transition: transform 0.3s ease, opacity 0.3s ease;
+	position: relative;
 	cursor: pointer;
+	transition: all 0.3s ease;
+	text-decoration: none;
 }
 
-.about-core-values-arrow:hover {
-	opacity: 1;
-	transform: translateX(5px);
+.about-core-values-arrow {
+	display: block;
+	width: 160px;
+	height: auto;
+	max-width: 100%;
+	transition: all 0.3s ease;
+	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.about-core-values-arrow-link:hover {
+	transform: translateX(5px) translateY(-2px);
+}
+
+.about-core-values-arrow-link:hover .about-core-values-arrow {
+	filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+	opacity: 0.9;
+}
+
+.about-core-values-arrow-link:active {
+	transform: translateX(3px) translateY(-1px);
 }
 
 /* Right Side - Cards with Background */
@@ -3045,9 +3061,16 @@ body.menu-open {
 		margin-bottom: 2rem;
 	}
 	
+	.about-core-values-arrow-link {
+		margin-top: 1.5rem;
+	}
+	
 	.about-core-values-arrow {
-		width: 120px;
-		height: 120px;
+		width: 140px;
+	}
+	
+	.about-core-values-arrow-link:hover {
+		transform: translateX(4px) translateY(-1px);
 	}
 	
 	.about-core-value-card {
