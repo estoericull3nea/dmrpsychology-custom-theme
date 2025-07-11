@@ -75,6 +75,138 @@ get_header();
             </div>
         </div>
     </section>
+
+    <section class="team-members-section">
+        <div class="team-members-container">
+            <div class="team-members-header">
+                <span class="team-members-label">OUR TEAM</span>
+                <h2 class="team-members-title">Meet Our Team</h2>
+                <div class="team-members-divider"></div>
+                <p class="team-members-intro">Our dedicated team of professionals is committed to providing exceptional psychological services and support.</p>
+            </div>
+
+            <div class="team-members-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-wrapper">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/9.webp'); ?>" 
+                            alt="Team Member Name" class="team-member-image">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info-hover">
+                                <p class="team-member-bio">Experienced professional dedicated to providing quality psychological services.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member-details">
+                        <h3 class="team-member-name">Dr. John Doe</h3>
+                        <p class="team-member-job">Clinical Psychologist</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-wrapper">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/8.webp'); ?>" 
+                            alt="Team Member Name" class="team-member-image">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info-hover">
+                                <p class="team-member-bio">Specialized in cognitive behavioral therapy and mental health assessment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member-details">
+                        <h3 class="team-member-name">Dr. Jane Smith</h3>
+                        <p class="team-member-job">Licensed Therapist</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-wrapper">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/7.webp'); ?>" 
+                            alt="Team Member Name" class="team-member-image">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info-hover">
+                                <p class="team-member-bio">Expert in organizational psychology and employee wellness programs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member-details">
+                        <h3 class="team-member-name">Dr. Michael Johnson</h3>
+                        <p class="team-member-job">Organizational Psychologist</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-wrapper">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/6.webp'); ?>" 
+                            alt="Team Member Name" class="team-member-image">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info-hover">
+                                <p class="team-member-bio">Focused on child and adolescent psychology and family counseling.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member-details">
+                        <h3 class="team-member-name">Dr. Sarah Williams</h3>
+                        <p class="team-member-job">Child Psychologist</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-wrapper">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/5.webp'); ?>" 
+                            alt="Team Member Name" class="team-member-image">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info-hover">
+                                <p class="team-member-bio">Specialist in trauma therapy and stress management techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member-details">
+                        <h3 class="team-member-name">Dr. Robert Brown</h3>
+                        <p class="team-member-job">Trauma Specialist</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-wrapper">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/4.webp'); ?>" 
+                            alt="Team Member Name" class="team-member-image">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info-hover">
+                                <p class="team-member-bio">Expert in educational psychology and student assessment programs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member-details">
+                        <h3 class="team-member-name">Dr. Emily Davis</h3>
+                        <p class="team-member-job">Educational Psychologist</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-wrapper">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/3.webp'); ?>" 
+                            alt="Team Member Name" class="team-member-image">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info-hover">
+                                <p class="team-member-bio">Specialized in sports psychology and performance enhancement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member-details">
+                        <h3 class="team-member-name">Dr. David Martinez</h3>
+                        <p class="team-member-job">Sports Psychologist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <script>

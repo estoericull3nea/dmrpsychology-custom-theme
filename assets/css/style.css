@@ -3728,3 +3728,251 @@ body.menu-open {
 		line-height: 1.75;
 	}
 }
+
+/* Team Members Section - Professional Design */
+.team-members-section {
+	background: #ffffff;
+	padding: 6rem var(--dmr-section-padding-horizontal);
+	position: relative;
+}
+
+.team-members-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(46, 125, 50, 0.2), transparent);
+}
+
+.team-members-container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.team-members-header {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.team-members-label {
+	display: block;
+	font-size: 0.75rem;
+	font-family: var(--dmr-heading-font);
+	font-weight: 700;
+	color: var(--dmr-primary-color);
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	margin-bottom: 0.75rem;
+}
+
+.team-members-title {
+	font-size: 2.5rem;
+	font-family: var(--dmr-heading-font);
+	font-weight: 700;
+	color: #1a1a1a;
+	margin: 0 0 1.5rem 0;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+
+.team-members-divider {
+	width: 60px;
+	height: 2px;
+	background: var(--dmr-primary-color);
+	margin: 0 auto 2rem auto;
+}
+
+.team-members-intro {
+	font-size: 1.125rem;
+	line-height: 1.75;
+	color: #4a4a4a;
+	margin: 0;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 400;
+}
+
+.team-members-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2.5rem;
+	margin-top: 3rem;
+}
+
+.team-member-card {
+	background: #ffffff;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	border: 1px solid rgba(46, 125, 50, 0.08);
+	position: relative;
+}
+
+.team-member-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 8px 24px rgba(46, 125, 50, 0.15);
+	border-color: rgba(46, 125, 50, 0.2);
+}
+
+.team-member-image-wrapper {
+	position: relative;
+	width: 100%;
+	padding-top: 100%; /* 1:1 Aspect Ratio */
+	overflow: hidden;
+	background: linear-gradient(135deg, var(--dmr-light-bg) 0%, #f0f5f1 100%);
+}
+
+.team-member-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-member-card:hover .team-member-image {
+	transform: scale(1.1);
+}
+
+.team-member-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(180deg, transparent 0%, rgba(46, 125, 50, 0.9) 100%);
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 2rem;
+}
+
+.team-member-card:hover .team-member-overlay {
+	opacity: 1;
+}
+
+.team-member-info-hover {
+	color: #ffffff;
+	text-align: center;
+	transform: translateY(20px);
+	transition: transform 0.4s ease;
+}
+
+.team-member-card:hover .team-member-info-hover {
+	transform: translateY(0);
+}
+
+.team-member-bio {
+	font-size: 0.95rem;
+	line-height: 1.6;
+	margin: 0;
+	color: #ffffff;
+	font-weight: 400;
+}
+
+.team-member-details {
+	padding: 1.75rem 1.5rem;
+	text-align: center;
+	background: #ffffff;
+}
+
+.team-member-name {
+	font-size: 1.25rem;
+	font-family: var(--dmr-heading-font);
+	font-weight: 700;
+	color: #1a1a1a;
+	margin: 0 0 0.5rem 0;
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+}
+
+.team-member-job {
+	font-size: 1rem;
+	color: var(--dmr-primary-color);
+	margin: 0;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+/* Team Members Responsive Styles */
+@media (max-width: 1200px) {
+	.team-members-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 968px) {
+	.team-members-section {
+		padding: 5rem var(--dmr-section-padding-horizontal);
+	}
+	
+	.team-members-header {
+		margin-bottom: 3rem;
+	}
+	
+	.team-members-title {
+		font-size: 2.25rem;
+	}
+	
+	.team-members-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.team-members-section {
+		padding: 4rem 1.5rem;
+	}
+	
+	.team-members-header {
+		margin-bottom: 2.5rem;
+	}
+	
+	.team-members-label {
+		font-size: 0.7rem;
+	}
+	
+	.team-members-title {
+		font-size: 2rem;
+	}
+	
+	.team-members-intro {
+		font-size: 1rem;
+	}
+	
+	.team-members-divider {
+		width: 50px;
+		margin-bottom: 1.5rem;
+	}
+	
+	.team-members-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.team-member-details {
+		padding: 1.5rem 1.25rem;
+	}
+	
+	.team-member-name {
+		font-size: 1.125rem;
+	}
+	
+	.team-member-job {
+		font-size: 0.95rem;
+	}
+}
