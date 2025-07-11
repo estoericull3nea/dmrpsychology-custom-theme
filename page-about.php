@@ -385,6 +385,125 @@ get_header();
         modalImg.addEventListener('dragstart', function (e) {
             e.preventDefault();
         });
+
+        // Handle active menu state for about page sections
+        function updateActiveMenuState() {
+            // Only run on about page
+            if (!document.querySelector('.about-hero-section')) {
+                return;
+            }
+
+            // Get all submenu items in the about page menu
+            const submenuItems = document.querySelectorAll('#primary-menu .sub-menu li');
+            const sections = {
+                'core-values': document.getElementById('core-values'),
+                'mission-vision': document.getElementById('mission-vision'),
+                'our-clients': document.getElementById('our-clients')
+            };
+
+            // Remove all active classes from submenu items
+            submenuItems.forEach(function (item) {
+                item.classList.remove('current-menu-item', 'current_page_item');
+                const link = item.querySelector('a');
+                if (link) {
+                    link.classList.remove('active');
+                }
+            });
+
+            // Function to check which section is in view
+            function getActiveSection() {
+                const scrollPosition = window.scrollY + 150; // Account for header offset
+                let activeSection = null;
+                let maxVisible = 0;
+
+                // Check each section
+                Object.keys(sections).forEach(function (sectionId) {
+                    const section = sections[sectionId];
+                    if (!section) return;
+
+                    const rect = section.getBoundingClientRect();
+                    const sectionTop = rect.top + window.scrollY;
+                    const sectionBottom = sectionTop + rect.height;
+                    const headerHeight = 100;
+
+                    // Check if section is in viewport
+                    if (scrollPosition >= (sectionTop - headerHeight) && scrollPosition < sectionBottom) {
+                        const visibleHeight = Math.min(sectionBottom, scrollPosition + window.innerHeight) - Math.max(sectionTop, scrollPosition);
+                        if (visibleHeight > maxVisible) {
+                            maxVisible = visibleHeight;
+                            activeSection = sectionId;
+                        }
+                    }
+                });
+
+                return activeSection;
+            }
+
+            // Function to set active menu item
+            function setActiveMenuItem(sectionId) {
+                // Remove all active classes first
+                submenuItems.forEach(function (item) {
+                    item.classList.remove('current-menu-item', 'current_page_item');
+                    const link = item.querySelector('a');
+                    if (link) {
+                        link.classList.remove('active');
+                    }
+                });
+
+                // Find and activate the matching menu item
+                if (sectionId) {
+                    submenuItems.forEach(function (item) {
+                        const link = item.querySelector('a');
+                        if (link) {
+                            const href = link.getAttribute('href');
+                            // Check if link matches the section
+                            if (href && (href.includes('#' + sectionId) || href.endsWith('#' + sectionId))) {
+                                item.classList.add('current-menu-item');
+                                link.classList.add('active');
+                            }
+                        }
+                    });
+                }
+            }
+
+            // Check on scroll
+            let ticking = false;
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    window.requestAnimationFrame(function () {
+                        const activeSection = getActiveSection();
+                        setActiveMenuItem(activeSection);
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // Check on page load
+            const activeSection = getActiveSection();
+            setActiveMenuItem(activeSection);
+
+            // Also check when hash changes (when clicking anchor links)
+            window.addEventListener('hashchange', function () {
+                const hash = window.location.hash.replace('#', '');
+                if (sections[hash]) {
+                    setActiveMenuItem(hash);
+                }
+            });
+
+            // Check initial hash
+            if (window.location.hash) {
+                const hash = window.location.hash.replace('#', '');
+                if (sections[hash]) {
+                    setTimeout(function () {
+                        setActiveMenuItem(hash);
+                    }, 500);
+                }
+            }
+        }
+
+        // Initialize menu state handler
+        updateActiveMenuState();
     });
 </script>
 
