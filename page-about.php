@@ -79,7 +79,7 @@ get_header();
         </div>
     </section>
 
-    <section class="about-core-values-section">
+    <section id="core-values" class="about-core-values-section">
         <div class="about-core-values-container">
             <div class="about-core-values-left">
                 <h2 class="about-core-values-title">
@@ -148,7 +148,7 @@ get_header();
         </div>
     </section>
 
-    <section class="about-mission-vision-section">
+    <section id="mission-vision" class="about-mission-vision-section">
         <div class="about-mission-vision-container">
             <!-- Mission Section -->
             <div class="mission-vision-block mission-block">
@@ -202,7 +202,7 @@ get_header();
         </div>
     </section>
 
-    <section class="about-clients-section">
+    <section id="our-clients" class="about-clients-section">
         <div class="about-clients-container">
             <div class="about-clients-header">
                 <span class="about-clients-label">OUR CLIENTS</span>

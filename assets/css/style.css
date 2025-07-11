@@ -33,6 +33,11 @@
 	font-family: var(--dmr-body-font);
 }
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px; /* Account for sticky header */
+}
+
 body {
 	color: #333;
 	font-size: var(--dmr-body-font-size);
