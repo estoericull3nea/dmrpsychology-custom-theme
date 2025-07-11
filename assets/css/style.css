@@ -3298,6 +3298,187 @@ body.menu-open {
 	}
 }
 
+/* About Page Our Clients Section - Minimalist Green Design */
+.about-clients-section {
+	background: #ffffff;
+	padding: 6rem var(--dmr-section-padding-horizontal);
+	position: relative;
+}
+
+.about-clients-container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.about-clients-header {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.about-clients-label {
+	display: block;
+	font-size: 0.75rem;
+	font-family: var(--dmr-heading-font);
+	font-weight: 700;
+	color: var(--dmr-primary-color);
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	margin-bottom: 0.75rem;
+}
+
+.about-clients-title {
+	font-size: 2.5rem;
+	font-family: var(--dmr-heading-font);
+	font-weight: 700;
+	color: #1a1a1a;
+	margin: 0 0 1.5rem 0;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+
+.about-clients-divider {
+	width: 60px;
+	height: 2px;
+	background: var(--dmr-primary-color);
+	margin: 0 auto 2rem auto;
+}
+
+.about-clients-intro {
+	font-size: 1.125rem;
+	line-height: 1.75;
+	color: #4a4a4a;
+	margin: 0;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 400;
+}
+
+.about-clients-blocks {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+	align-items: start;
+}
+
+.about-client-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.client-block-icon {
+	width: 64px;
+	height: 64px;
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.client-block-icon svg {
+	width: 64px;
+	height: 64px;
+}
+
+.client-block-title {
+	font-size: 1.25rem;
+	font-family: var(--dmr-heading-font);
+	font-weight: 700;
+	color: #1a1a1a;
+	margin: 0 0 1rem 0;
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+}
+
+.client-block-description {
+	font-size: 0.95rem;
+	line-height: 1.7;
+	color: #6a6a6a;
+	margin: 0;
+	font-weight: 400;
+}
+
+/* Our Clients Responsive Styles */
+@media (max-width: 1200px) {
+	.about-clients-blocks {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem;
+	}
+}
+
+@media (max-width: 968px) {
+	.about-clients-section {
+		padding: 5rem var(--dmr-section-padding-horizontal);
+	}
+	
+	.about-clients-header {
+		margin-bottom: 3rem;
+	}
+	
+	.about-clients-title {
+		font-size: 2.25rem;
+	}
+	
+	.about-clients-blocks {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2.5rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.about-clients-section {
+		padding: 4rem 1.5rem;
+	}
+	
+	.about-clients-header {
+		margin-bottom: 2.5rem;
+	}
+	
+	.about-clients-label {
+		font-size: 0.7rem;
+	}
+	
+	.about-clients-title {
+		font-size: 2rem;
+	}
+	
+	.about-clients-intro {
+		font-size: 1rem;
+	}
+	
+	.about-clients-divider {
+		width: 50px;
+		margin-bottom: 1.5rem;
+	}
+	
+	.about-clients-blocks {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+	
+	.client-block-icon {
+		width: 56px;
+		height: 56px;
+		margin-bottom: 1.25rem;
+	}
+	
+	.client-block-icon svg {
+		width: 56px;
+		height: 56px;
+	}
+	
+	.client-block-title {
+		font-size: 1.125rem;
+		margin-bottom: 0.875rem;
+	}
+	
+	.client-block-description {
+		font-size: 0.9rem;
+		line-height: 1.65;
+	}
+}
+
 @media (max-width: 640px) {
 	.about-mission-vision-section {
 		padding: 4rem 1.5rem;

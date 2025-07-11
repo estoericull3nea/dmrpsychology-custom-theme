@@ -188,6 +188,87 @@ get_header();
             </div>
         </div>
     </section>
+
+    <section class="about-clients-section">
+        <div class="about-clients-container">
+            <div class="about-clients-header">
+                <span class="about-clients-label">OUR CLIENTS</span>
+                <h2 class="about-clients-title">Our Clients</h2>
+                <div class="about-clients-divider"></div>
+                <p class="about-clients-intro">We are a mental health provider specializing in counseling, psychological
+                    assessment, and training for individuals and different organizations. We cater to the following:</p>
+            </div>
+
+            <div class="about-clients-blocks">
+                <div class="about-client-block">
+                    <div class="client-block-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="16" width="48" height="12" rx="6" fill="var(--dmr-primary-color)" />
+                            <circle cx="14" cy="22" r="3" fill="var(--dmr-light-green)" />
+                            <rect x="8" y="32" width="48" height="12" rx="6" fill="var(--dmr-light-green)" />
+                            <circle cx="54" cy="38" r="3" fill="#ffffff" />
+                        </svg>
+                    </div>
+                    <h3 class="client-block-title">Individual Clients</h3>
+                    <p class="client-block-description">This includes children, adolescents, and adults who are seeking
+                        additional psychological support for their personal struggles.</p>
+                </div>
+
+                <div class="about-client-block">
+                    <div class="client-block-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="24" fill="var(--dmr-light-green)" />
+                            <circle cx="32" cy="24" r="8" fill="var(--dmr-primary-color)" />
+                            <path d="M20 40C20 36 24 32 32 32C40 32 44 36 44 40" stroke="var(--dmr-primary-color)"
+                                stroke-width="3" stroke-linecap="round" />
+                            <line x1="32" y1="48" x2="32" y2="52" stroke="var(--dmr-primary-color)" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="client-block-title">Organizational Clients</h3>
+                    <p class="client-block-description">We partner with different private and corporate organizations in
+                        the Philippines and internationally.</p>
+                </div>
+
+                <div class="about-client-block">
+                    <div class="client-block-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <clipPath id="heartLeftClip">
+                                    <rect x="0" y="0" width="32" height="64" />
+                                </clipPath>
+                            </defs>
+                            <path d="M32 20C28 16 20 18 20 26C20 34 28 42 32 46C36 42 44 34 44 26C44 18 36 16 32 20Z"
+                                fill="var(--dmr-primary-color)" clip-path="url(#heartLeftClip)" />
+                            <path d="M32 20C28 16 20 18 20 26C20 34 28 42 32 46C36 42 44 34 44 26C44 18 36 16 32 20Z"
+                                fill="var(--dmr-light-green)" />
+                        </svg>
+                    </div>
+                    <h3 class="client-block-title">Esports Teams</h3>
+                    <p class="client-block-description">We also handle psychological assessments and evaluations for
+                        different Esports teams, conduct team-building workshops, and provide mental toughness training
+                        for them.</p>
+                </div>
+
+                <div class="about-client-block">
+                    <div class="client-block-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="24" fill="var(--dmr-light-green)" />
+                            <path d="M32 16C32 16 20 22 20 32C20 42 26 48 32 48C38 48 44 42 44 32C44 22 32 16 32 16Z"
+                                fill="var(--dmr-primary-color)" />
+                            <circle cx="32" cy="28" r="4" fill="#ffffff" />
+                            <path d="M24 36L32 40L40 36" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="client-block-title">HMO Companies</h3>
+                    <p class="client-block-description">In an effort to make mental health support and services more
+                        accessible to different individuals, we partner with HMO companies to provide comprehensive
+                        psychological services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php
