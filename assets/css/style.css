@@ -3080,9 +3080,9 @@ body.menu-open {
 	}
 }
 
-/* About Page Mission & Vision Section - Professional Design */
+/* About Page Mission & Vision Section - Professional Green Design */
 .about-mission-vision-section {
-	background: #ffffff;
+	background: linear-gradient(180deg, #f5f9f6 0%, #f0f5f1 100%);
 	padding: 6rem var(--dmr-section-padding-horizontal);
 	position: relative;
 }
@@ -3094,7 +3094,7 @@ body.menu-open {
 	left: 0;
 	right: 0;
 	height: 1px;
-	background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
+	background: linear-gradient(90deg, transparent, rgba(46, 125, 50, 0.2), transparent);
 }
 
 .about-mission-vision-container {
@@ -3107,23 +3107,27 @@ body.menu-open {
 }
 
 .mission-vision-block {
-	background: #ffffff;
-	border: 1px solid #e5e5e5;
+	background: linear-gradient(135deg, #ffffff 0%, #f8fbf9 100%);
+	border: 1px solid rgba(46, 125, 50, 0.15);
 	padding: 4rem;
 	position: relative;
-	transition: border-color 0.3s ease;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 8px rgba(46, 125, 50, 0.05);
 }
 
 .mission-vision-block:hover {
-	border-color: #d0d0d0;
+	border-color: rgba(46, 125, 50, 0.25);
+	box-shadow: 0 4px 16px rgba(46, 125, 50, 0.1);
 }
 
 .mission-block {
-	border-top: 3px solid #2a2a2a;
+	border-top: 3px solid var(--dmr-primary-color);
+	background: linear-gradient(135deg, #ffffff 0%, #f0f7f1 100%);
 }
 
 .vision-block {
-	border-top: 3px solid #2a2a2a;
+	border-top: 3px solid var(--dmr-light-green);
+	background: linear-gradient(135deg, #ffffff 0%, #f2f9f4 100%);
 }
 
 .mission-vision-header {
@@ -3134,12 +3138,21 @@ body.menu-open {
 	margin-bottom: 1.5rem;
 }
 
+.mission-block .mission-vision-label {
+	color: var(--dmr-primary-color);
+	font-weight: 700;
+}
+
+.vision-block .mission-vision-label {
+	color: var(--dmr-light-green);
+	font-weight: 700;
+}
+
 .mission-vision-label {
 	display: block;
 	font-size: 0.75rem;
 	font-family: var(--dmr-heading-font);
 	font-weight: 600;
-	color: #6a6a6a;
 	letter-spacing: 0.15em;
 	text-transform: uppercase;
 	margin-bottom: 0.75rem;
@@ -3155,10 +3168,17 @@ body.menu-open {
 	letter-spacing: -0.02em;
 }
 
+.mission-block .mission-vision-divider {
+	background: var(--dmr-primary-color);
+}
+
+.vision-block .mission-vision-divider {
+	background: var(--dmr-light-green);
+}
+
 .mission-vision-divider {
 	width: 60px;
 	height: 2px;
-	background: #2a2a2a;
 	margin-top: 1.5rem;
 }
 
@@ -3173,6 +3193,14 @@ body.menu-open {
 	padding-left: 2rem;
 }
 
+.mission-block .mission-vision-item::before {
+	background: var(--dmr-primary-color);
+}
+
+.vision-block .mission-vision-item::before {
+	background: var(--dmr-light-green);
+}
+
 .mission-vision-item::before {
 	content: '';
 	position: absolute;
@@ -3180,8 +3208,15 @@ body.menu-open {
 	top: 0.5rem;
 	width: 6px;
 	height: 6px;
-	background: #2a2a2a;
 	border-radius: 50%;
+}
+
+.mission-block .mission-vision-item:not(:last-child)::after {
+	background: rgba(46, 125, 50, 0.2);
+}
+
+.vision-block .mission-vision-item:not(:last-child)::after {
+	background: rgba(76, 175, 80, 0.2);
 }
 
 .mission-vision-item:not(:last-child)::after {
@@ -3191,13 +3226,12 @@ body.menu-open {
 	top: 1.25rem;
 	width: 1px;
 	height: calc(100% + 1.25rem);
-	background: #e0e0e0;
 }
 
 .mission-vision-text {
 	font-size: 1.0625rem;
 	line-height: 1.8;
-	color: #4a4a4a;
+	color: #3a3a3a;
 	margin: 0;
 	font-weight: 400;
 	letter-spacing: 0.01em;
