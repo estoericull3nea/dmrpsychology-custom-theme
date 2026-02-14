@@ -17,7 +17,9 @@ get_header();
                     <span class="about-hero-title-line-1">Our</span>
                     <span class="about-hero-title-line-2">Team</span>
                 </h1>
-                <p class="about-hero-description">Our team comprises highly qualified and experienced psychologists, therapists, and mental health professionals. We are dedicated to providing evidence-based care and support to individuals seeking to improve their well-being.</p>
+                <p class="about-hero-description">Our team comprises highly qualified and experienced psychologists,
+                    therapists, and mental health professionals. We are dedicated to providing evidence-based care and
+                    support to individuals seeking to improve their well-being.</p>
                 <a href="https://forms.gle/qm4JR9u9r2M7mxf18" class="about-hero-cta-button" target="_blank"
                     rel="noopener noreferrer">
                     <span>Get Started for Free</span>
@@ -82,126 +84,152 @@ get_header();
                 <span class="team-members-label">OUR TEAM</span>
                 <h2 class="team-members-title">Meet Our Team</h2>
                 <div class="team-members-divider"></div>
-                <p class="team-members-intro">Our dedicated team of professionals is committed to providing exceptional psychological services and support.</p>
+                <p class="team-members-intro">Our dedicated team of professionals is committed to providing exceptional
+                    psychological services and support.</p>
             </div>
 
             <div class="team-members-grid">
                 <!-- Team Member 1 -->
                 <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/9.webp'); ?>" 
-                            alt="Team Member Name" class="team-member-image">
-                        <div class="team-member-overlay">
-                            <div class="team-member-info-hover">
-                                <p class="team-member-bio">Experienced professional dedicated to providing quality psychological services.</p>
-                            </div>
-                        </div>
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Eric-L.-Dimar-MA-RPsy-RGC.webp'); ?>"
+                            alt="Eric L. Dimar" class="team-member-image">
                     </div>
-                    <div class="team-member-details">
-                        <h3 class="team-member-name">Dr. John Doe</h3>
-                        <p class="team-member-job">Clinical Psychologist</p>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Eric L. Dimar, MA, RPsy, RGC</h3>
+                        <p class="team-member-title">Lead Psychologist</p>
                     </div>
                 </div>
 
                 <!-- Team Member 2 -->
                 <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/8.webp'); ?>" 
-                            alt="Team Member Name" class="team-member-image">
-                        <div class="team-member-overlay">
-                            <div class="team-member-info-hover">
-                                <p class="team-member-bio">Specialized in cognitive behavioral therapy and mental health assessment.</p>
-                            </div>
-                        </div>
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Isabel-Victoria-C.-Mapalad-RPm.webp'); ?>"
+                            alt="Isabel Victoria C. Mapalad" class="team-member-image">
                     </div>
-                    <div class="team-member-details">
-                        <h3 class="team-member-name">Dr. Jane Smith</h3>
-                        <p class="team-member-job">Licensed Therapist</p>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Isabel Victoria C. Mapalad, RPm</h3>
+                        <p class="team-member-title">Psychologist</p>
                     </div>
                 </div>
 
                 <!-- Team Member 3 -->
                 <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/7.webp'); ?>" 
-                            alt="Team Member Name" class="team-member-image">
-                        <div class="team-member-overlay">
-                            <div class="team-member-info-hover">
-                                <p class="team-member-bio">Expert in organizational psychology and employee wellness programs.</p>
-                            </div>
-                        </div>
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Abigail-G.-Taladtad-MAEd-RGC.webp'); ?>"
+                            alt="Abigail G. Taladtad" class="team-member-image">
                     </div>
-                    <div class="team-member-details">
-                        <h3 class="team-member-name">Dr. Michael Johnson</h3>
-                        <p class="team-member-job">Organizational Psychologist</p>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Abigail G. Taladtad, MAEd, RGC</h3>
+                        <p class="team-member-title">Guidance Counselor</p>
                     </div>
                 </div>
 
                 <!-- Team Member 4 -->
                 <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/6.webp'); ?>" 
-                            alt="Team Member Name" class="team-member-image">
-                        <div class="team-member-overlay">
-                            <div class="team-member-info-hover">
-                                <p class="team-member-bio">Focused on child and adolescent psychology and family counseling.</p>
-                            </div>
-                        </div>
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Kiana-D.C.-San-Juan-MA-RPsy.webp'); ?>"
+                            alt="Kiana D.C. San Juan" class="team-member-image">
                     </div>
-                    <div class="team-member-details">
-                        <h3 class="team-member-name">Dr. Sarah Williams</h3>
-                        <p class="team-member-job">Child Psychologist</p>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Kiana D.C. San Juan, MA, RPsy</h3>
+                        <p class="team-member-title">Psychologist</p>
                     </div>
                 </div>
 
                 <!-- Team Member 5 -->
                 <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/5.webp'); ?>" 
-                            alt="Team Member Name" class="team-member-image">
-                        <div class="team-member-overlay">
-                            <div class="team-member-info-hover">
-                                <p class="team-member-bio">Specialist in trauma therapy and stress management techniques.</p>
-                            </div>
-                        </div>
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Alvin-L.-Jacob-III-MP-RPsy.webp'); ?>"
+                            alt="Alvin L. Jacob III" class="team-member-image">
                     </div>
-                    <div class="team-member-details">
-                        <h3 class="team-member-name">Dr. Robert Brown</h3>
-                        <p class="team-member-job">Trauma Specialist</p>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Alvin L. Jacob III, MP, RPsy</h3>
+                        <p class="team-member-title">Psychologist</p>
                     </div>
                 </div>
 
                 <!-- Team Member 6 -->
                 <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/4.webp'); ?>" 
-                            alt="Team Member Name" class="team-member-image">
-                        <div class="team-member-overlay">
-                            <div class="team-member-info-hover">
-                                <p class="team-member-bio">Expert in educational psychology and student assessment programs.</p>
-                            </div>
-                        </div>
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Mabeth-B.-Francia-MP-RPsy-RGC.webp'); ?>"
+                            alt="Mabeth B. Francia" class="team-member-image">
                     </div>
-                    <div class="team-member-details">
-                        <h3 class="team-member-name">Dr. Emily Davis</h3>
-                        <p class="team-member-job">Educational Psychologist</p>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Mabeth B. Francia, MP, RPsy, RGC</h3>
+                        <p class="team-member-title">Psychologist</p>
                     </div>
                 </div>
 
                 <!-- Team Member 7 -->
                 <div class="team-member-card">
-                    <div class="team-member-image-wrapper">
-                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/3.webp'); ?>" 
-                            alt="Team Member Name" class="team-member-image">
-                        <div class="team-member-overlay">
-                            <div class="team-member-info-hover">
-                                <p class="team-member-bio">Specialized in sports psychology and performance enhancement.</p>
-                            </div>
-                        </div>
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Michelle-Ivanne-M.-Avila-MA-RPsy.webp'); ?>"
+                            alt="Michelle Ivanne M. Avila" class="team-member-image">
                     </div>
-                    <div class="team-member-details">
-                        <h3 class="team-member-name">Dr. David Martinez</h3>
-                        <p class="team-member-job">Sports Psychologist</p>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Michelle Ivanne M. Avila, MA, RPsy</h3>
+                        <p class="team-member-title">Psychologist</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 8 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Ma.-Cristine-Jhoie-M.-Solano-RPm.webp'); ?>"
+                            alt="Ma. Cristine Jhoie M. Solano" class="team-member-image">
+                    </div>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Ma. Cristine Jhoie M. Solano, RPm</h3>
+                        <p class="team-member-title">Psychometrician</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 9 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Lowel-L.-Urian-MAEd-RGC.webp'); ?>"
+                            alt="Lowel L. Urian" class="team-member-image">
+                    </div>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Lowel L. Urian, MAEd, RGC</h3>
+                        <p class="team-member-title">Guidance Counselor</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 10 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Elaine-Kate-A.-Castro-RPm.webp'); ?>"
+                            alt="Elaine Kate A. Castro" class="team-member-image">
+                    </div>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Elaine Kate A. Castro, RPm</h3>
+                        <p class="team-member-title">Psychometrician</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 11 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Erika-Mae-P.-SIlva-Rpm.webp'); ?>"
+                            alt="Erika Mae P. Silva" class="team-member-image">
+                    </div>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Erika Mae P. Silva, RPm</h3>
+                        <p class="team-member-title">Psychometrician</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 12 -->
+                <div class="team-member-card">
+                    <div class="team-member-image-container">
+                        <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Trisha-Joy-O.-Gotinga-MA-RPsy.webp'); ?>"
+                            alt="Trisha Joy O. Gotinga" class="team-member-image">
+                    </div>
+                    <div class="team-member-info">
+                        <h3 class="team-member-name">Trisha Joy O. Gotinga, MA, RPsy</h3>
+                        <p class="team-member-title">Psychologist</p>
                     </div>
                 </div>
             </div>
