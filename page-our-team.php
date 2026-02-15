@@ -109,7 +109,7 @@ get_header();
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Isabel Victoria C. Mapalad, RPm</h3>
-                        <p class="team-member-title">Psychologist</p>
+                        <p class="team-member-title">Lead Psychometrician</p>
                     </div>
                 </div>
 
@@ -121,7 +121,7 @@ get_header();
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Abigail G. Taladtad, MAEd, RGC</h3>
-                        <p class="team-member-title">Guidance Counselor</p>
+                        <p class="team-member-title">Consultant</p>
                     </div>
                 </div>
 
@@ -133,7 +133,7 @@ get_header();
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Kiana D.C. San Juan, MA, RPsy</h3>
-                        <p class="team-member-title">Psychologist</p>
+                        <p class="team-member-title">Consultant</p>
                     </div>
                 </div>
 
@@ -145,7 +145,7 @@ get_header();
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Alvin L. Jacob III, MP, RPsy</h3>
-                        <p class="team-member-title">Psychologist</p>
+                        <p class="team-member-title">Consultant</p>
                     </div>
                 </div>
 
@@ -157,7 +157,7 @@ get_header();
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Mabeth B. Francia, MP, RPsy, RGC</h3>
-                        <p class="team-member-title">Psychologist</p>
+                        <p class="team-member-title">Consultant</p>
                     </div>
                 </div>
 
@@ -169,7 +169,7 @@ get_header();
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Michelle Ivanne M. Avila, MA, RPsy</h3>
-                        <p class="team-member-title">Psychologist</p>
+                        <p class="team-member-title">Consultant</p>
                     </div>
                 </div>
 
@@ -181,7 +181,7 @@ get_header();
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Ma. Cristine Jhoie M. Solano, RPm</h3>
-                        <p class="team-member-title">Psychometrician</p>
+                        <p class="team-member-title">Consultant</p>
                     </div>
                 </div>
 
@@ -193,7 +193,7 @@ get_header();
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Lowel L. Urian, MAEd, RGC</h3>
-                        <p class="team-member-title">Guidance Counselor</p>
+                        <p class="team-member-title">Consultant</p>
                     </div>
                 </div>
 
@@ -229,7 +229,7 @@ get_header();
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Trisha Joy O. Gotinga, MA, RPsy</h3>
-                        <p class="team-member-title">Psychologist</p>
+                        <p class="team-member-title">Consultant</p>
                     </div>
                 </div>
             </div>
