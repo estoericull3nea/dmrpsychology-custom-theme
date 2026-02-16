@@ -70,6 +70,10 @@ get_header();
 
     <section class="contact-form-section">
         <div class="contact-form-container">
+            <div class="contact-form-header">
+                <h2 class="contact-form-title">Get in Touch</h2>
+                <p class="contact-form-subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
             <div class="contact-form-wrapper">
                 <?php echo do_shortcode('[forminator_form id="98"]'); ?>
             </div>
