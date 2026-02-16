@@ -146,6 +146,100 @@ get_header();
             </div>
         </div>
     </section>
+
+    <section class="other-services-section">
+        <div class="other-services-container">
+            <div class="other-services-header">
+                <span class="other-services-label">OTHER SERVICES</span>
+                <h2 class="other-services-title">Other Services</h2>
+                <div class="other-services-divider"></div>
+                <p class="other-services-intro">The goal is to collaboratively help the client understand and organize their mental space, set goals, and identify the necessary steps to accomplish these goals, improve coping skills and resilience, and promote positive emotional change and mental health.</p>
+            </div>
+
+            <div class="other-services-grid">
+                <!-- Service 1: Counseling and Psychotherapy -->
+                <div class="other-service-card">
+                    <div class="other-service-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="var(--dmr-light-green)"/>
+                            <path d="M32 16L36 26L46 28L38 36L40 46L32 42L24 46L26 36L18 28L28 26L32 16Z" fill="var(--dmr-primary-color)"/>
+                        </svg>
+                    </div>
+                    <h3 class="other-service-title">Counseling and Psychotherapy</h3>
+                    <div class="other-service-content">
+                        <p class="other-service-subtitle">Services include:</p>
+                        <ul class="other-service-list">
+                            <li>Individual Sessions</li>
+                            <li>Groups Debriefing Sessions</li>
+                            <li>Marital and Non-Marital Couple Sessions</li>
+                            <li>Family Therapy</li>
+                        </ul>
+                        <p class="other-service-subtitle">This also includes:</p>
+                        <ul class="other-service-list">
+                            <li>Grief Counseling</li>
+                            <li>Psychological First Aid</li>
+                            <li>Mental Health First Aid</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2: Psychological Assessment -->
+                <div class="other-service-card">
+                    <div class="other-service-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="var(--dmr-light-green)"/>
+                            <rect x="18" y="20" width="28" height="24" rx="2" fill="var(--dmr-primary-color)"/>
+                            <line x1="22" y1="26" x2="42" y2="26" stroke="#ffffff" stroke-width="2"/>
+                            <line x1="22" y1="32" x2="38" y2="32" stroke="#ffffff" stroke-width="2"/>
+                            <line x1="22" y1="38" x2="40" y2="38" stroke="#ffffff" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="other-service-title">Psychological Assessment</h3>
+                    <div class="other-service-content">
+                        <p class="other-service-subtitle">Services include:</p>
+                        <ul class="other-service-list">
+                            <li>Neuropsychological Examination</li>
+                            <li>Pre-employment Clearance</li>
+                            <li>Annual Psychological Assessment of Employees</li>
+                            <li>Academic Developmental Forms</li>
+                        </ul>
+                        <p class="other-service-subtitle">This also includes:</p>
+                        <ul class="other-service-list">
+                            <li>Cognitive and Intelligence Tests</li>
+                            <li>Personality Tests</li>
+                            <li>Mental Status Examinations</li>
+                            <li>Development of Psychological Tests</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3: Employee Training and Wellness Programs -->
+                <div class="other-service-card">
+                    <div class="other-service-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="var(--dmr-light-green)"/>
+                            <rect x="24" y="24" width="16" height="16" rx="2" fill="var(--dmr-primary-color)"/>
+                            <path d="M32 20L36 24L32 28L28 24L32 20Z" fill="var(--dmr-primary-color)"/>
+                            <path d="M32 44L36 40L32 36L28 40L32 44Z" fill="var(--dmr-primary-color)"/>
+                            <path d="M20 32L24 28L28 32L24 36L20 32Z" fill="var(--dmr-primary-color)"/>
+                            <path d="M44 32L40 28L36 32L40 36L44 32Z" fill="var(--dmr-primary-color)"/>
+                        </svg>
+                    </div>
+                    <h3 class="other-service-title">Employee Training and Wellness Programs</h3>
+                    <div class="other-service-content">
+                        <p class="other-service-subtitle">Service include:</p>
+                        <ul class="other-service-list">
+                            <li>Health Policy Consultations</li>
+                            <li>Mental Health Seminars</li>
+                            <li>Mental Health Workshops and Trainings</li>
+                            <li>Development of Company Safety Plan</li>
+                            <li>In-house Counseling Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <script>
