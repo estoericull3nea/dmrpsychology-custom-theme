@@ -106,14 +106,6 @@ get_header();
                             <h2 class="service-main-title">Psychological Assessment</h2>
                             <span class="service-bg-letter">P</span>
                             <p class="service-description">The goal is to collaboratively help the client understand and organize their mental space, set goals, and identify the necessary steps to accomplish these goals, improve coping skills and resilience, and promote positive emotional change and mental health.</p>
-                            <ul class="service-list">
-                                <li>Individual Assessment</li>
-                                <li>Psychological Testing</li>
-                                <li>Mental Health Evaluation</li>
-                            </ul>
-                            <button class="service-expand-btn">
-                                <span>+</span>
-                            </button>
                         </div>
                         <div class="service-visual-block">
                             <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/9.webp'); ?>" 
@@ -133,14 +125,6 @@ get_header();
                             <h2 class="service-main-title">Counseling and Psychotherapy</h2>
                             <span class="service-bg-letter">C</span>
                             <p class="service-description">A process wherein the client answers a battery of tests. These tests will be used to evaluate a person's behavior, abilities, and other characteristics, particularly for the purposes of making a diagnosis or treatment recommendation. This can also be used for the accomplishment of developmental forms and and the issuance of a mental health clearance for students and employees.</p>
-                            <ul class="service-list">
-                                <li>Individual Therapy</li>
-                                <li>Group Counseling</li>
-                                <li>Mental Health Clearance</li>
-                            </ul>
-                            <button class="service-expand-btn">
-                                <span>+</span>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -152,14 +136,6 @@ get_header();
                             <h2 class="service-main-title">Employee Training & Wellness Program</h2>
                             <span class="service-bg-letter">E</span>
                             <p class="service-description">Mental Health Training in the workplace acknowledges the existence of different stressors in the employees' lives and teaches them better ways to cope and address them to avoid the effects on their work performance. It aims to improve the employee's productivity and performance, boost the company's identity and culture, and reduce workplace conflict.</p>
-                            <ul class="service-list">
-                                <li>Workplace Wellness</li>
-                                <li>Stress Management</li>
-                                <li>Team Building</li>
-                            </ul>
-                            <button class="service-expand-btn">
-                                <span>+</span>
-                            </button>
                         </div>
                         <div class="service-visual-block">
                             <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/7.webp'); ?>" 

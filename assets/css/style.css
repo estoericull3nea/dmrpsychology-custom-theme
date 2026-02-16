@@ -3961,18 +3961,24 @@ body.menu-open {
 	display: flex;
 	position: relative;
 	min-height: 100vh;
+	align-items: flex-start;
+	gap: 2rem;
 }
 
 /* Left Sidebar Navigation */
 .services-sidebar {
-	position: fixed;
-	left: 2rem;
+	position: sticky;
 	top: 50%;
 	transform: translateY(-50%);
+	align-self: flex-start;
 	z-index: 100;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	padding: 2rem;
+	height: fit-content;
+	flex-shrink: 0;
+	width: 200px;
 }
 
 .services-nav-item {
@@ -4049,14 +4055,14 @@ body.menu-open {
 /* Services Content Container */
 .services-content-container {
 	flex: 1;
-	margin-left: 200px;
 	padding: 4rem 4rem 4rem 0;
+	min-width: 0;
 }
 
 .service-section {
 	display: block;
-	min-height: 100vh;
-	padding: 6rem 0;
+	min-height: 80vh;
+	padding: 3rem 0;
 }
 
 .service-section-inner {
@@ -4111,66 +4117,12 @@ body.menu-open {
 	font-size: 1.125rem;
 	color: #4a4a4a;
 	line-height: 1.8;
-	margin: 0 0 2rem 0;
+	margin: 0;
 	font-weight: 400;
 	position: relative;
 	z-index: 1;
 }
 
-.service-list {
-	list-style: none;
-	padding: 0;
-	margin: 0 0 2rem 0;
-	position: relative;
-	z-index: 1;
-}
-
-.service-list li {
-	font-size: 1rem;
-	color: #4a4a4a;
-	line-height: 2;
-	padding-left: 1.5rem;
-	position: relative;
-}
-
-.service-list li::before {
-	content: '•';
-	position: absolute;
-	left: 0;
-	color: var(--dmr-primary-color);
-	font-size: 1.5rem;
-	line-height: 1.5;
-}
-
-.service-expand-btn {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	border: 2px solid #1a1a1a;
-	background: transparent;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s ease;
-	position: relative;
-	z-index: 1;
-}
-
-.service-expand-btn span {
-	font-size: 1.5rem;
-	color: #1a1a1a;
-	font-weight: 300;
-	line-height: 1;
-}
-
-.service-expand-btn:hover {
-	background: #1a1a1a;
-}
-
-.service-expand-btn:hover span {
-	color: #ffffff;
-}
 
 /* Service Visual Block */
 .service-visual-block {
@@ -4192,8 +4144,12 @@ body.menu-open {
 
 /* Services Responsive Styles */
 @media (max-width: 1200px) {
+	.services-sidebar {
+		width: 180px;
+		padding: 1.5rem;
+	}
+	
 	.services-content-container {
-		margin-left: 180px;
 		padding: 3rem 3rem 3rem 0;
 	}
 	
@@ -4211,13 +4167,42 @@ body.menu-open {
 }
 
 @media (max-width: 968px) {
+	.services-content-wrapper {
+		flex-direction: column;
+		gap: 0;
+	}
+	
 	.services-sidebar {
-		left: 1rem;
+		position: relative;
+		top: auto;
+		transform: none;
+		width: 100%;
+		flex-direction: row;
+		justify-content: center;
+		padding: 2rem 1rem;
+		gap: 2rem;
+		background: #ffffff;
+		border-bottom: 1px solid rgba(46, 125, 50, 0.1);
+	}
+	
+	.services-sidebar::before {
+		display: none;
+	}
+	
+	.services-nav-item {
+		flex-direction: column;
+		align-items: center;
+		padding-left: 0;
+		gap: 0.5rem;
+	}
+	
+	.services-nav-item::before {
+		display: none;
 	}
 	
 	.services-content-container {
-		margin-left: 160px;
-		padding: 2rem 2rem 2rem 0;
+		padding: 2rem 2rem 2rem 2rem;
+		width: 100%;
 	}
 	
 	.service-section-inner {
@@ -4243,24 +4228,32 @@ body.menu-open {
 	}
 	
 	.nav-label {
-		display: none;
+		font-size: 0.75rem;
+		text-align: center;
 	}
 }
 
 @media (max-width: 640px) {
 	.services-sidebar {
-		left: 0.5rem;
-		gap: 1.5rem;
+		padding: 1.5rem 0.5rem;
+		gap: 1rem;
+	}
+	
+	.services-nav-item {
+		gap: 0.25rem;
 	}
 	
 	.services-content-container {
-		margin-left: 60px;
-		padding: 2rem 1rem 2rem 0;
+		padding: 2rem 1rem;
 	}
 	
 	.service-section {
 		padding: 2rem 0;
 		min-height: auto;
+	}
+	
+	.service-section-inner {
+		gap: 2rem;
 	}
 	
 	.service-text-block {
@@ -4280,7 +4273,7 @@ body.menu-open {
 	
 	.service-description {
 		font-size: 1rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: 0;
 	}
 	
 	.service-visual-block {
@@ -4289,5 +4282,9 @@ body.menu-open {
 	
 	.service-list li {
 		font-size: 0.9rem;
+	}
+	
+	.nav-label {
+		display: none;
 	}
 }
