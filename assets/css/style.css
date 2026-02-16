@@ -4062,13 +4062,14 @@ body.menu-open {
 .service-section {
 	display: block;
 	min-height: 70vh;
-	padding: 2rem 0;
+	padding: 4rem 0;
+	margin-bottom: 2rem;
 }
 
 .service-section-inner {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 3rem;
+	gap: 4rem;
 	align-items: center;
 	max-width: 1400px;
 	margin: 0 auto;
@@ -4153,7 +4154,12 @@ body.menu-open {
 	}
 	
 	.service-section-inner {
-		gap: 2.5rem;
+		gap: 3rem;
+	}
+	
+	.service-section {
+		padding: 3rem 0;
+		margin-bottom: 1.5rem;
 	}
 	
 	.service-main-title {
@@ -4250,12 +4256,13 @@ body.menu-open {
 	}
 	
 	.service-section {
-		padding: 1.5rem 0;
+		padding: 2.5rem 0;
 		min-height: auto;
+		margin-bottom: 1.5rem;
 	}
 	
 	.service-section-inner {
-		gap: 1.5rem;
+		gap: 2rem;
 	}
 	
 	.service-text-block {
