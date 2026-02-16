@@ -2412,6 +2412,61 @@ body.menu-open {
 	overflow: visible;
 }
 
+.life-reminders-video-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	height: 450px;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+	background: #000000;
+	margin-top: 2rem;
+}
+
+.about-hero-visual .life-reminders-video-wrapper {
+	margin: 2rem auto 0 auto;
+}
+
+.life-reminders-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.life-reminders-play-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	padding: 0;
+}
+
+.life-reminders-play-btn:hover {
+	transform: translate(-50%, -50%) scale(1.1);
+}
+
+.life-reminders-play-btn:active {
+	transform: translate(-50%, -50%) scale(0.95);
+}
+
+.life-reminders-play-btn svg {
+	transition: all 0.3s ease;
+}
+
+.life-reminders-play-btn:hover svg circle {
+	fill: rgba(255, 255, 255, 1);
+}
+
 .about-hero-portraits-arc {
 	position: relative;
 	width: 100%;
@@ -2784,7 +2839,23 @@ body.menu-open {
 	
 	.about-hero-visual {
 		margin: 2rem 0;
-		height: 180px;
+		height: auto;
+	}
+	
+	.life-reminders-video-wrapper {
+		max-width: 100%;
+		height: 350px;
+		border-radius: 12px;
+		margin-top: 1.5rem;
+	}
+	
+	.about-hero-visual .life-reminders-video-wrapper {
+		margin: 1.5rem auto 0 auto;
+	}
+	
+	.life-reminders-play-btn svg {
+		width: 70px;
+		height: 70px;
 	}
 	
 	.portrait-item {
@@ -2858,6 +2929,21 @@ body.menu-open {
 	.about-hero-cta-button {
 		padding: 0.75rem 1.5rem;
 		font-size: 0.9rem;
+	}
+	
+	.life-reminders-video-wrapper {
+		height: 280px;
+		border-radius: 10px;
+		margin-top: 1.5rem;
+	}
+	
+	.about-hero-visual .life-reminders-video-wrapper {
+		margin: 1.5rem auto 0 auto;
+	}
+	
+	.life-reminders-play-btn svg {
+		width: 60px;
+		height: 60px;
 	}
 	
 	.about-feature-title {
