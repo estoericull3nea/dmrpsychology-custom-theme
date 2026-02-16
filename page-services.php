@@ -108,7 +108,7 @@ get_header();
                             <p class="service-description">The goal is to collaboratively help the client understand and organize their mental space, set goals, and identify the necessary steps to accomplish these goals, improve coping skills and resilience, and promote positive emotional change and mental health.</p>
                         </div>
                         <div class="service-visual-block">
-                            <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/9.webp'); ?>" 
+                            <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Psychological-Assessment.webp'); ?>" 
                                 alt="Psychological Assessment" class="service-visual-image">
                         </div>
                     </div>
@@ -118,7 +118,7 @@ get_header();
                 <div class="service-section" id="service-2">
                     <div class="service-section-inner reverse">
                         <div class="service-visual-block">
-                            <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/8.webp'); ?>" 
+                            <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Counseling-and-Psychotherapy.webp'); ?>" 
                                 alt="Counseling and Psychotherapy" class="service-visual-image">
                         </div>
                         <div class="service-text-block">
@@ -138,7 +138,7 @@ get_header();
                             <p class="service-description">Mental Health Training in the workplace acknowledges the existence of different stressors in the employees' lives and teaches them better ways to cope and address them to avoid the effects on their work performance. It aims to improve the employee's productivity and performance, boost the company's identity and culture, and reduce workplace conflict.</p>
                         </div>
                         <div class="service-visual-block">
-                            <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/7.webp'); ?>" 
+                            <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/Employee-Training-Wellness-Program.webp'); ?>" 
                                 alt="Employee Training & Wellness Program" class="service-visual-image">
                         </div>
                     </div>
