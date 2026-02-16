@@ -4215,7 +4215,12 @@ body.menu-open {
 		gap: 1.5rem;
 	}
 	
-	.service-section-inner.reverse .service-text-block {
+	.service-visual-block {
+		height: 400px;
+		order: 1;
+	}
+	
+	.service-text-block {
 		order: 2;
 	}
 	
@@ -4223,8 +4228,8 @@ body.menu-open {
 		order: 1;
 	}
 	
-	.service-visual-block {
-		height: 400px;
+	.service-section-inner.reverse .service-text-block {
+		order: 2;
 	}
 	
 	.service-main-title {
@@ -4265,8 +4270,22 @@ body.menu-open {
 		gap: 2rem;
 	}
 	
+	.service-visual-block {
+		height: 300px;
+		order: 1;
+	}
+	
 	.service-text-block {
 		padding: 1rem;
+		order: 2;
+	}
+	
+	.service-section-inner.reverse .service-visual-block {
+		order: 1;
+	}
+	
+	.service-section-inner.reverse .service-text-block {
+		order: 2;
 	}
 	
 	.service-main-title {
@@ -4283,10 +4302,6 @@ body.menu-open {
 	.service-description {
 		font-size: 1rem;
 		margin-bottom: 0;
-	}
-	
-	.service-visual-block {
-		height: 300px;
 	}
 	
 	.service-list li {
