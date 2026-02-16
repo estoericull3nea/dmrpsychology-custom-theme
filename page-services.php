@@ -75,6 +75,101 @@ get_header();
             </div>
         </div>
     </section>
+
+    <section class="services-content-section">
+        <div class="services-content-wrapper">
+            <!-- Left Sidebar Navigation -->
+            <div class="services-sidebar">
+                <div class="services-nav-item active" data-service="1">
+                    <span class="nav-dot"></span>
+                    <span class="nav-number">01</span>
+                    <span class="nav-label">Psychological Assessment</span>
+                </div>
+                <div class="services-nav-item" data-service="2">
+                    <span class="nav-dot"></span>
+                    <span class="nav-number">02</span>
+                    <span class="nav-label">Counseling & Psychotherapy</span>
+                </div>
+                <div class="services-nav-item" data-service="3">
+                    <span class="nav-dot"></span>
+                    <span class="nav-number">03</span>
+                    <span class="nav-label">Employee Training & Wellness</span>
+                </div>
+            </div>
+
+            <!-- Services Content -->
+            <div class="services-content-container">
+                <!-- Service 1: Text Left, Image Right -->
+                <div class="service-section active" id="service-1">
+                    <div class="service-section-inner">
+                        <div class="service-text-block">
+                            <h2 class="service-main-title">Psychological Assessment</h2>
+                            <span class="service-bg-letter">P</span>
+                            <p class="service-description">The goal is to collaboratively help the client understand and organize their mental space, set goals, and identify the necessary steps to accomplish these goals, improve coping skills and resilience, and promote positive emotional change and mental health.</p>
+                            <ul class="service-list">
+                                <li>Individual Assessment</li>
+                                <li>Psychological Testing</li>
+                                <li>Mental Health Evaluation</li>
+                            </ul>
+                            <button class="service-expand-btn">
+                                <span>+</span>
+                            </button>
+                        </div>
+                        <div class="service-visual-block">
+                            <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/9.webp'); ?>" 
+                                alt="Psychological Assessment" class="service-visual-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Image Left, Text Right -->
+                <div class="service-section" id="service-2">
+                    <div class="service-section-inner reverse">
+                        <div class="service-visual-block">
+                            <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/8.webp'); ?>" 
+                                alt="Counseling and Psychotherapy" class="service-visual-image">
+                        </div>
+                        <div class="service-text-block">
+                            <h2 class="service-main-title">Counseling and Psychotherapy</h2>
+                            <span class="service-bg-letter">C</span>
+                            <p class="service-description">A process wherein the client answers a battery of tests. These tests will be used to evaluate a person's behavior, abilities, and other characteristics, particularly for the purposes of making a diagnosis or treatment recommendation. This can also be used for the accomplishment of developmental forms and and the issuance of a mental health clearance for students and employees.</p>
+                            <ul class="service-list">
+                                <li>Individual Therapy</li>
+                                <li>Group Counseling</li>
+                                <li>Mental Health Clearance</li>
+                            </ul>
+                            <button class="service-expand-btn">
+                                <span>+</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Text Left, Image Right -->
+                <div class="service-section" id="service-3">
+                    <div class="service-section-inner">
+                        <div class="service-text-block">
+                            <h2 class="service-main-title">Employee Training & Wellness Program</h2>
+                            <span class="service-bg-letter">E</span>
+                            <p class="service-description">Mental Health Training in the workplace acknowledges the existence of different stressors in the employees' lives and teaches them better ways to cope and address them to avoid the effects on their work performance. It aims to improve the employee's productivity and performance, boost the company's identity and culture, and reduce workplace conflict.</p>
+                            <ul class="service-list">
+                                <li>Workplace Wellness</li>
+                                <li>Stress Management</li>
+                                <li>Team Building</li>
+                            </ul>
+                            <button class="service-expand-btn">
+                                <span>+</span>
+                            </button>
+                        </div>
+                        <div class="service-visual-block">
+                            <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/7.webp'); ?>" 
+                                alt="Employee Training & Wellness Program" class="service-visual-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <script>
@@ -178,6 +273,59 @@ get_header();
         modalImg.addEventListener('dragstart', function (e) {
             e.preventDefault();
         });
+
+        // Services Navigation
+        const navItems = document.querySelectorAll('.services-nav-item');
+        const serviceSections = document.querySelectorAll('.service-section');
+
+        function scrollToService(serviceNumber) {
+            const targetSection = document.getElementById('service-' + serviceNumber);
+            if (targetSection) {
+                const offset = 100;
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Add click handlers to nav items
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const serviceNumber = this.getAttribute('data-service');
+                scrollToService(serviceNumber);
+            });
+        });
+
+        // Scroll spy - update active nav on scroll
+        function updateActiveNav() {
+            const scrollPos = window.scrollY + window.innerHeight / 3;
+            
+            serviceSections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                const sectionTop = rect.top + window.scrollY;
+                const sectionBottom = sectionTop + rect.height;
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                    navItems.forEach(item => item.classList.remove('active'));
+                    if (navItems[index]) {
+                        navItems[index].classList.add('active');
+                    }
+                }
+            });
+        }
+
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(updateActiveNav, 50);
+        });
+
+        // Initial update
+        updateActiveNav();
     });
 </script>
 
