@@ -30,7 +30,7 @@ get_header();
 
             <div class="about-hero-visual">
                 <div class="life-reminders-video-wrapper">
-                    <video class="life-reminders-video" muted loop playsinline>
+                    <video class="life-reminders-video" loop playsinline>
                         <source src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/youre-better-now-Made-with-Clipchamp-1.mp4'); ?>" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -38,6 +38,11 @@ get_header();
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="40" cy="40" r="38" fill="rgba(255, 255, 255, 0.9)" stroke="var(--dmr-primary-color)" stroke-width="2"/>
                             <path d="M32 26L32 54L54 40L32 26Z" fill="var(--dmr-primary-color)"/>
+                        </svg>
+                    </button>
+                    <button class="life-reminders-fullscreen-btn" aria-label="Toggle fullscreen">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 3H5C3.89543 3 3 3.89543 3 5V8M21 8V5C21 3.89543 20.1046 3 19 3H16M16 21H19C20.1046 21 21 20.1046 21 19V16M3 16V19C3 20.1046 3.89543 21 5 21H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
                 </div>
@@ -50,6 +55,8 @@ get_header();
     document.addEventListener('DOMContentLoaded', function () {
         const video = document.querySelector('.life-reminders-video');
         const playBtn = document.querySelector('.life-reminders-play-btn');
+        const fullscreenBtn = document.querySelector('.life-reminders-fullscreen-btn');
+        const videoWrapper = document.querySelector('.life-reminders-video-wrapper');
         
         if (video && playBtn) {
             // Play button click handler
@@ -76,6 +83,54 @@ get_header();
             video.addEventListener('pause', function() {
                 playBtn.style.display = 'flex';
             });
+        }
+        
+        // Fullscreen functionality
+        if (fullscreenBtn && videoWrapper) {
+            fullscreenBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleFullscreen();
+            });
+            
+            function toggleFullscreen() {
+                if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                    // Enter fullscreen
+                    if (videoWrapper.requestFullscreen) {
+                        videoWrapper.requestFullscreen();
+                    } else if (videoWrapper.mozRequestFullScreen) {
+                        videoWrapper.mozRequestFullScreen();
+                    } else if (videoWrapper.webkitRequestFullscreen) {
+                        videoWrapper.webkitRequestFullscreen();
+                    } else if (videoWrapper.msRequestFullscreen) {
+                        videoWrapper.msRequestFullscreen();
+                    }
+                } else {
+                    // Exit fullscreen
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                        document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                }
+            }
+            
+            // Listen for fullscreen changes
+            document.addEventListener('fullscreenchange', updateFullscreenButton);
+            document.addEventListener('mozfullscreenchange', updateFullscreenButton);
+            document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
+            document.addEventListener('msfullscreenchange', updateFullscreenButton);
+            
+            function updateFullscreenButton() {
+                if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+                    fullscreenBtn.setAttribute('aria-label', 'Exit fullscreen');
+                } else {
+                    fullscreenBtn.setAttribute('aria-label', 'Enter fullscreen');
+                }
+            }
         }
     });
 </script>

@@ -2467,6 +2467,43 @@ body.menu-open {
 	fill: rgba(255, 255, 255, 1);
 }
 
+.life-reminders-fullscreen-btn {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	background: rgba(0, 0, 0, 0.6);
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	border-radius: 8px;
+	padding: 0.75rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	transition: all 0.3s ease;
+	color: #ffffff;
+}
+
+.life-reminders-fullscreen-btn:hover {
+	background: rgba(0, 0, 0, 0.8);
+	border-color: var(--dmr-primary-color);
+	transform: scale(1.1);
+}
+
+.life-reminders-fullscreen-btn:active {
+	transform: scale(0.95);
+}
+
+.life-reminders-fullscreen-btn svg {
+	width: 20px;
+	height: 20px;
+	transition: all 0.3s ease;
+}
+
+.life-reminders-fullscreen-btn:hover svg {
+	color: var(--dmr-primary-color);
+}
+
 .about-hero-portraits-arc {
 	position: relative;
 	width: 100%;
@@ -2858,6 +2895,17 @@ body.menu-open {
 		height: 70px;
 	}
 	
+	.life-reminders-fullscreen-btn {
+		bottom: 0.75rem;
+		right: 0.75rem;
+		padding: 0.625rem;
+	}
+	
+	.life-reminders-fullscreen-btn svg {
+		width: 18px;
+		height: 18px;
+	}
+	
 	.portrait-item {
 		width: 100px;
 		height: 130px;
@@ -2944,6 +2992,17 @@ body.menu-open {
 	.life-reminders-play-btn svg {
 		width: 60px;
 		height: 60px;
+	}
+	
+	.life-reminders-fullscreen-btn {
+		bottom: 0.5rem;
+		right: 0.5rem;
+		padding: 0.5rem;
+	}
+	
+	.life-reminders-fullscreen-btn svg {
+		width: 16px;
+		height: 16px;
 	}
 	
 	.about-feature-title {
