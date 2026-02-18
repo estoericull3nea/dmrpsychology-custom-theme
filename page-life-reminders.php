@@ -49,6 +49,64 @@ get_header();
             </div>
         </div>
     </section>
+
+    <section class="life-reminders-gallery-section">
+        <div class="life-reminders-gallery-container">
+            <div class="life-reminders-gallery-grid">
+                <div class="life-reminder-item">
+                    <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/9-1.webp'); ?>" 
+                        alt="Life Reminder" class="life-reminder-image"
+                        data-image="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/9-1.webp'); ?>">
+                </div>
+                <div class="life-reminder-item">
+                    <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/8-1.webp'); ?>" 
+                        alt="Life Reminder" class="life-reminder-image"
+                        data-image="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/8-1.webp'); ?>">
+                </div>
+                <div class="life-reminder-item">
+                    <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/7-1.webp'); ?>" 
+                        alt="Life Reminder" class="life-reminder-image"
+                        data-image="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/7-1.webp'); ?>">
+                </div>
+                <div class="life-reminder-item">
+                    <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/6-1.webp'); ?>" 
+                        alt="Life Reminder" class="life-reminder-image"
+                        data-image="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/6-1.webp'); ?>">
+                </div>
+                <div class="life-reminder-item">
+                    <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/5-1.webp'); ?>" 
+                        alt="Life Reminder" class="life-reminder-image"
+                        data-image="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/5-1.webp'); ?>">
+                </div>
+                <div class="life-reminder-item">
+                    <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/4-1.webp'); ?>" 
+                        alt="Life Reminder" class="life-reminder-image"
+                        data-image="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/4-1.webp'); ?>">
+                </div>
+                <div class="life-reminder-item">
+                    <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/3-1.webp'); ?>" 
+                        alt="Life Reminder" class="life-reminder-image"
+                        data-image="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/3-1.webp'); ?>">
+                </div>
+                <div class="life-reminder-item">
+                    <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/2-1.webp'); ?>" 
+                        alt="Life Reminder" class="life-reminder-image"
+                        data-image="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/2-1.webp'); ?>">
+                </div>
+                <div class="life-reminder-item">
+                    <img src="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/1-1.webp'); ?>" 
+                        alt="Life Reminder" class="life-reminder-image"
+                        data-image="<?php echo esc_url(get_site_url() . '/wp-content/uploads/2026/02/1-1.webp'); ?>">
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Modal -->
+        <div id="life-reminder-modal" class="portrait-modal">
+            <span class="portrait-modal-close">&times;</span>
+            <img class="portrait-modal-content" id="life-reminder-modal-image" src="" alt="Life Reminder">
+        </div>
+    </section>
 </main>
 
 <script>
@@ -130,6 +188,110 @@ get_header();
                 } else {
                     fullscreenBtn.setAttribute('aria-label', 'Enter fullscreen');
                 }
+            }
+        }
+        
+        // Life Reminders Gallery Modal
+        const lifeReminderModal = document.getElementById('life-reminder-modal');
+        const lifeReminderModalImg = document.getElementById('life-reminder-modal-image');
+        const lifeReminderCloseBtn = lifeReminderModal ? lifeReminderModal.querySelector('.portrait-modal-close') : null;
+        const lifeReminderImages = document.querySelectorAll('.life-reminder-image');
+        
+        // Prevent body scroll when modal is open
+        function preventBodyScroll() {
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+        }
+        
+        function restoreBodyScroll() {
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+        }
+        
+        // Open modal when image is clicked or touched
+        if (lifeReminderImages.length > 0 && lifeReminderModal) {
+            lifeReminderImages.forEach(function (img) {
+                img.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    lifeReminderModal.classList.add('show');
+                    lifeReminderModalImg.src = this.getAttribute('data-image');
+                    lifeReminderModalImg.alt = this.alt;
+                    preventBodyScroll();
+                });
+                
+                // Touch support for mobile
+                img.addEventListener('touchend', function (e) {
+                    e.preventDefault();
+                    lifeReminderModal.classList.add('show');
+                    lifeReminderModalImg.src = this.getAttribute('data-image');
+                    lifeReminderModalImg.alt = this.alt;
+                    preventBodyScroll();
+                });
+            });
+        }
+        
+        // Close modal when close button is clicked
+        if (lifeReminderCloseBtn) {
+            lifeReminderCloseBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                lifeReminderModal.classList.remove('show');
+                restoreBodyScroll();
+            });
+            
+            // Touch support for close button
+            lifeReminderCloseBtn.addEventListener('touchend', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                lifeReminderModal.classList.remove('show');
+                restoreBodyScroll();
+            });
+        }
+        
+        // Close modal when clicking outside the image
+        if (lifeReminderModal) {
+            lifeReminderModal.addEventListener('click', function (e) {
+                if (e.target === lifeReminderModal) {
+                    lifeReminderModal.classList.remove('show');
+                    restoreBodyScroll();
+                }
+            });
+            
+            // Touch support for closing on background tap
+            let touchStartY = 0;
+            lifeReminderModal.addEventListener('touchstart', function (e) {
+                if (e.target === lifeReminderModal) {
+                    touchStartY = e.touches[0].clientY;
+                }
+            });
+            
+            lifeReminderModal.addEventListener('touchend', function (e) {
+                if (e.target === lifeReminderModal) {
+                    const touchEndY = e.changedTouches[0].clientY;
+                    const diff = Math.abs(touchEndY - touchStartY);
+                    // Only close if it's a tap (not a swipe)
+                    if (diff < 10) {
+                        lifeReminderModal.classList.remove('show');
+                        restoreBodyScroll();
+                    }
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && lifeReminderModal.classList.contains('show')) {
+                    lifeReminderModal.classList.remove('show');
+                    restoreBodyScroll();
+                }
+            });
+            
+            // Prevent image dragging on mobile
+            if (lifeReminderModalImg) {
+                lifeReminderModalImg.addEventListener('dragstart', function (e) {
+                    e.preventDefault();
+                });
             }
         }
     });
