@@ -195,39 +195,52 @@ get_header();
         const lifeReminderModal = document.getElementById('life-reminder-modal');
         const lifeReminderModalImg = document.getElementById('life-reminder-modal-image');
         const lifeReminderCloseBtn = lifeReminderModal ? lifeReminderModal.querySelector('.portrait-modal-close') : null;
-        const lifeReminderImages = document.querySelectorAll('.life-reminder-image');
+        const lifeReminderItems = document.querySelectorAll('.life-reminder-item');
+        
+        let scrollPosition = 0;
         
         // Prevent body scroll when modal is open
         function preventBodyScroll() {
+            scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
             document.body.style.overflow = 'hidden';
             document.body.style.position = 'fixed';
+            document.body.style.top = '-' + scrollPosition + 'px';
             document.body.style.width = '100%';
         }
         
         function restoreBodyScroll() {
             document.body.style.overflow = '';
             document.body.style.position = '';
+            document.body.style.top = '';
             document.body.style.width = '';
+            window.scrollTo(0, scrollPosition);
         }
         
-        // Open modal when image is clicked or touched
-        if (lifeReminderImages.length > 0 && lifeReminderModal) {
-            lifeReminderImages.forEach(function (img) {
-                img.addEventListener('click', function (e) {
+        // Open modal when item is clicked or touched
+        if (lifeReminderItems.length > 0 && lifeReminderModal) {
+            lifeReminderItems.forEach(function (item) {
+                const img = item.querySelector('.life-reminder-image');
+                if (!img) return;
+                
+                item.addEventListener('click', function (e) {
                     e.preventDefault();
+                    e.stopPropagation();
                     lifeReminderModal.classList.add('show');
-                    lifeReminderModalImg.src = this.getAttribute('data-image');
-                    lifeReminderModalImg.alt = this.alt;
+                    lifeReminderModalImg.src = img.getAttribute('data-image');
+                    lifeReminderModalImg.alt = img.alt;
                     preventBodyScroll();
+                    return false;
                 });
                 
                 // Touch support for mobile
-                img.addEventListener('touchend', function (e) {
+                item.addEventListener('touchend', function (e) {
                     e.preventDefault();
+                    e.stopPropagation();
                     lifeReminderModal.classList.add('show');
-                    lifeReminderModalImg.src = this.getAttribute('data-image');
-                    lifeReminderModalImg.alt = this.alt;
+                    lifeReminderModalImg.src = img.getAttribute('data-image');
+                    lifeReminderModalImg.alt = img.alt;
                     preventBodyScroll();
+                    return false;
                 });
             });
         }
