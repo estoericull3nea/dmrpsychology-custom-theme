@@ -4755,3 +4755,38 @@ body.menu-open {
 		line-height: 1.7;
 	}
 }
+
+/* Contact Form Section */
+.contact-form-section {
+	background: #ffffff;
+	padding: 6rem var(--dmr-section-padding-horizontal);
+	position: relative;
+}
+
+.contact-form-container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.contact-form-wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+/* Contact Form Responsive Styles */
+@media (max-width: 968px) {
+	.contact-form-section {
+		padding: 5rem var(--dmr-section-padding-horizontal);
+	}
+	
+	.contact-form-wrapper {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 640px) {
+	.contact-form-section {
+		padding: 4rem 1.5rem;
+	}
+}

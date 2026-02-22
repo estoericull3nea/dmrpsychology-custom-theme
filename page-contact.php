@@ -67,6 +67,14 @@ get_header();
             </div>
         </div>
     </section>
+
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            <div class="contact-form-wrapper">
+                <?php echo do_shortcode('[forminator_form id="98"]'); ?>
+            </div>
+        </div>
+    </section>
 </main>
 
 <script>
