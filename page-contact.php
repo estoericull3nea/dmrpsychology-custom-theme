@@ -71,7 +71,9 @@ get_header();
     <section class="contact-form-section">
         <div class="contact-form-container">
             <div class="contact-form-header">
+                <span class="contact-form-label">CONTACT</span>
                 <h2 class="contact-form-title">Get in Touch</h2>
+                <div class="contact-form-divider"></div>
                 <p class="contact-form-subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
             </div>
             <div class="contact-form-wrapper">
